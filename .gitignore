@@ -13,3 +13,8 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Folder ignores
+_addons/
+_exports/
+_saves/
