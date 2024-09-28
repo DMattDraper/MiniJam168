@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjkrnxpftqln6"]
+[gd_scene load_steps=15 format=3 uid="uid://bjkrnxpftqln6"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hhvl7"]
 [ext_resource type="Shader" path="res://effects/shaders/vignette.gdshader" id="2_1qiie"]
 [ext_resource type="PackedScene" uid="uid://of8r6nv4lqt5" path="res://player/character_mover.tscn" id="2_mitfl"]
 [ext_resource type="Script" path="res://player/interactor.gd" id="2_xyanl"]
+[ext_resource type="Texture2D" uid="uid://qx012ctecnqr" path="res://effects/SuperPerlin_01-512x512.png" id="6_0q8m0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v4kk7"]
 
@@ -28,8 +29,91 @@ shader_parameter/color = Color(0, 0.0980392, 1, 1)
 shader_parameter/inner_radius = 0.4
 shader_parameter/outer_radius = 1.5
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnxl2"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.294118)
+albedo_texture = ExtResource("6_0q8m0")
+uv1_scale = Vector3(0.001, 0.001, 0.001)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b7cxu"]
+material = SubResource("StandardMaterial3D_wnxl2")
+flip_faces = true
+size = Vector2(10000, 10000)
+
+[sub_resource type="Animation" id="Animation_tlewc"]
+resource_name = "cycle"
+length = 40.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 10, 15, 20, 25, 30, 35, 40),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.294118), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 0.294118), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 0.294118), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 0.294118), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 0.294118)]
+}
+
+[sub_resource type="Animation" id="Animation_yxq7o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.294118)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aurd4"]
+_data = {
+"RESET": SubResource("Animation_yxq7o"),
+"cycle": SubResource("Animation_tlewc")
+}
+
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_hhvl7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+light_energy = 0.2
+omni_range = 10.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -97,3 +181,14 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.392157)
+
+[node name="Clouds" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 200, 0)
+cast_shadow = 2
+mesh = SubResource("PlaneMesh_b7cxu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Clouds"]
+libraries = {
+"": SubResource("AnimationLibrary_aurd4")
+}
+autoplay = "cycle"
