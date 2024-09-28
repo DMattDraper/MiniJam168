@@ -1,6 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4jsgxd614kf7"]
+[gd_scene load_steps=15 format=3 uid="uid://c4jsgxd614kf7"]
 
+[ext_resource type="Script" path="res://scenes/scene.gd" id="1_hmrk8"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="1_sxvfc"]
+[ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="1_u3osk"]
+[ext_resource type="PackedScene" uid="uid://cdmhvqnm7aqqr" path="res://world/interactables/orbs/red_orb.tscn" id="3_rvccb"]
+[ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="4_axmbm"]
+[ext_resource type="PackedScene" uid="uid://g8ungw4v6h7e" path="res://world/interactables/orbs/blue_orb.tscn" id="5_amx7y"]
+[ext_resource type="PackedScene" uid="uid://0dwqip03vn5s" path="res://display/ui/hud.tscn" id="6_txs8x"]
+[ext_resource type="PackedScene" uid="uid://ifjxle76vc2l" path="res://world/interactables/dials/cube_dial.tscn" id="8_1hnom"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ikmvk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -14,25 +21,29 @@ background_mode = 2
 sky = SubResource("Sky_60w8l")
 tonemap_mode = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjtga"]
-albedo_color = Color(0.0959979, 0.0500424, 6.01634e-09, 1)
-metallic_specular = 0.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32q51"]
+albedo_texture = ExtResource("1_u3osk")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3er2o"]
-material = SubResource("StandardMaterial3D_fjtga")
+material = SubResource("StandardMaterial3D_32q51")
 size = Vector2(10, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_om5fu"]
 size = Vector3(10, 0, 20)
 
 [node name="Greybox" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 12, 0)
-shadow_enabled = true
+script = ExtResource("1_hmrk8")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f8ahi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 12, 0)
+shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_3er2o")
@@ -44,3 +55,24 @@ shape = SubResource("BoxShape3D_om5fu")
 
 [node name="Player" parent="." instance=ExtResource("1_sxvfc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0814495, 0, 8.73288)
+
+[node name="RedOrb" parent="." instance=ExtResource("3_rvccb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 1
+collision_mask = 1
+
+[node name="GreenOrb" parent="." instance=ExtResource("4_axmbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
+collision_layer = 1
+collision_mask = 1
+
+[node name="BlueOrb" parent="." instance=ExtResource("5_amx7y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+collision_layer = 1
+collision_mask = 1
+
+[node name="HUD" parent="." instance=ExtResource("6_txs8x")]
+
+[node name="HexDial" parent="." instance=ExtResource("8_1hnom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123596, 1, 6.75961)
+values = Array[String](["A", "B", "C", "D"])

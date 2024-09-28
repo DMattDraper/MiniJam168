@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8ungw4v6h7e"]
+
+[ext_resource type="PackedScene" uid="uid://r7ko174xfgfu" path="res://world/interactables/orbs/orb.tscn" id="1_4duwf"]
+[ext_resource type="Material" uid="uid://boirp51sofaaw" path="res://world/interactables/orbs/blue.tres" id="2_vwn5p"]
+
+[node name="BlueOrb" instance=ExtResource("1_4duwf")]
+color = 3
+
+[node name="MeshInstance3D" parent="Graphics" index="0"]
+surface_material_override/0 = ExtResource("2_vwn5p")
+
+[node name="MeshInstance3D2" parent="Graphics" index="1"]
+surface_material_override/0 = ExtResource("2_vwn5p")
+
+[node name="OmniLight3D" parent="Graphics" index="2"]
+light_color = Color(0, 0.0980392, 1, 1)

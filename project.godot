@@ -15,12 +15,31 @@ run/main_scene="res://scenes/greybox.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://managers/GameManager.gd"
+UIManager="*res://managers/UIManager.gd"
+InteractionManager="*res://managers/InteractionManager.gd"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/mode=3
 window/stretch/mode="viewport"
+
+[file_customization]
+
+folder_colors={
+"res://world/": "green"
+}
+
+[global_group]
+
+colored=""
+player=""
+hud=""
+orb=""
 
 [input]
 
