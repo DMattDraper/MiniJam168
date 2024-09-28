@@ -1,0 +1,152 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckhby5fy7ip2n"]
+
+[ext_resource type="Environment" uid="uid://dbt1ebwcsmdpo" path="res://display/world_environment.tres" id="1_uedcg"]
+
+[sub_resource type="Animation" id="Animation_1i7jr"]
+resource_name = "spin"
+length = 50.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 50),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(6.28319, 2.61799, 0), Vector3(9.39497e-09, 2.61799, 3.72529e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:environment:ambient_light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 12.5, 25, 37.5, 50),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.996078, 0.843137, 0.0509804, 1), Color(0.706026, 0.793464, 0.861546, 1), Color(0.996078, 0.843137, 0.0509804, 1), Color(0.137255, 0.0901961, 0.321569, 1), Color(0.996078, 0.843137, 0.0509804, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DirectionalLight3D:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 12.5, 25, 37.5, 50),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.993333, 0.8, 1), Color(0.784314, 0.784314, 0.870588, 1), Color(1, 0.993333, 0.8, 1), Color(0, 0, 0, 1), Color(1, 0.993333, 0.8, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 12.5, 25, 37.5, 50),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.180392, 0.0313726, 0.121569, 1), Color(0.666667, 0.741176, 0.843137, 1), Color(0.180392, 0.0313726, 0.121569, 1), Color(0.0156863, 0.0352941, 0.192157, 1), Color(0.180392, 0.0313726, 0.121569, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 12.5, 25, 37.5, 50),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.956863, 0.478431, 0.0470588, 1), Color(0.772549, 0.835294, 0.878431, 1), Color(0.956863, 0.478431, 0.0470588, 1), Color(0.227451, 0.301961, 0.454902, 1), Color(0.956863, 0.478431, 0.0470588, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ysxnn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(9.39497e-09, 2.61799, 3.72529e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:environment:ambient_light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.996078, 0.843137, 0.0509804, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DirectionalLight3D:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.993333, 0.8, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.180392, 0.0313726, 0.121569, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.956863, 0.478431, 0.0470588, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s43dr"]
+_data = {
+"RESET": SubResource("Animation_ysxnn"),
+"spin": SubResource("Animation_1i7jr")
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = ExtResource("1_uedcg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.5, -2.18557e-08, 0, -4.37114e-08, 1, -0.5, 0.866026, 3.78552e-08, 0, 12, 0)
+light_color = Color(0.784314, 0.784314, 0.870588, 1)
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s43dr")
+}
+autoplay = "spin"

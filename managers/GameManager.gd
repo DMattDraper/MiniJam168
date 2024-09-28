@@ -14,3 +14,6 @@ func update_sight_color(color: Sight.COLORS):
 	var colored_objects = get_tree().get_nodes_in_group("colored")
 	for obj: MultiColorObject in colored_objects:
 		obj.update_sprite(color)
+
+func reset():
+	update_sight_color(Sight.COLORS.NONE)
