@@ -4,7 +4,7 @@
 [ext_resource type="Shader" path="res://effects/shaders/vignette.gdshader" id="2_1qiie"]
 [ext_resource type="PackedScene" uid="uid://of8r6nv4lqt5" path="res://player/character_mover.tscn" id="2_mitfl"]
 [ext_resource type="Script" path="res://player/interactor.gd" id="2_xyanl"]
-[ext_resource type="Texture2D" uid="uid://qx012ctecnqr" path="res://effects/shaders/SuperPerlin_01-512x512.png" id="6_0q8m0"]
+[ext_resource type="Texture2D" uid="uid://qx012ctecnqr" path="res://effects/SuperPerlin_01-512x512.png" id="6_0q8m0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v4kk7"]
 
