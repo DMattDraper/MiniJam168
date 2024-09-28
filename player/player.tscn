@@ -36,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_v4kk7")
 
 [node name="CharacterMover" parent="." instance=ExtResource("2_mitfl")]
-max_speed = 10.0
+max_speed = 7.0
 move_accel = 3.0
 
 [node name="Head" type="Node3D" parent="."]

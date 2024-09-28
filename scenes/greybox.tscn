@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c4jsgxd614kf7"]
+[gd_scene load_steps=24 format=3 uid="uid://c4jsgxd614kf7"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_hmrk8"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="1_sxvfc"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="12_s2y8q"]
 [ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="13_qa1kj"]
 [ext_resource type="AudioStream" uid="uid://dxesxy6hm5iav" path="res://sound/sfx/fart.ogg" id="13_rwrtb"]
+[ext_resource type="AudioStream" uid="uid://bhyo3w5ain177" path="res://sound/music/soundtrack.ogg" id="15_dx3f0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ikmvk"]
 sky_top_color = Color(0.172549, 0.54902, 0.627451, 1)
@@ -255,3 +256,9 @@ wait_time = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 target = "door"
 target_name = "limited"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_dx3f0")
+volume_db = -8.0
+autoplay = true
+bus = &"Music"
