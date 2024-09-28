@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://ml2uipml5302"]
+[gd_scene load_steps=73 format=3 uid="uid://ml2uipml5302"]
 
 [ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="1_7ifcb"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="2_waxnw"]
@@ -8,26 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="6_p4c5o"]
 [ext_resource type="PackedScene" uid="uid://g8ungw4v6h7e" path="res://world/interactables/orbs/blue_orb.tscn" id="7_e60ih"]
 [ext_resource type="PackedScene" uid="uid://0dwqip03vn5s" path="res://display/ui/hud.tscn" id="8_1gmgk"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n17wn"]
-sky_top_color = Color(0.172549, 0.54902, 0.627451, 1)
-sky_horizon_color = Color(0.647059, 0.729412, 0.768627, 1)
-ground_bottom_color = Color(0.2, 0.207843, 0.133333, 1)
-ground_horizon_color = Color(0.415686, 0.454902, 0.45098, 1)
-
-[sub_resource type="Sky" id="Sky_60w8l"]
-sky_material = SubResource("ProceduralSkyMaterial_n17wn")
-
-[sub_resource type="Environment" id="Environment_ea1mr"]
-background_mode = 2
-sky = SubResource("Sky_60w8l")
-ambient_light_source = 2
-ambient_light_color = Color(0.160784, 0.160784, 0.160784, 1)
-ssao_intensity = 5.0
-sdfgi_use_occlusion = true
-sdfgi_read_sky_light = false
-sdfgi_y_scale = 0
-volumetric_fog_density = 0.025
+[ext_resource type="PackedScene" path="res://display/world_environment.tscn" id="9_gl38p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32q51"]
 albedo_texture = ExtResource("1_7ifcb")
@@ -259,13 +240,6 @@ size = Vector3(0.5, 2.5, 12)
 
 [node name="Player" parent="." instance=ExtResource("2_waxnw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ea1mr")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 12, 0)
-shadow_enabled = true
 
 [node name="Terrain" type="Node3D" parent="."]
 
@@ -863,3 +837,5 @@ shape = SubResource("CylinderShape3D_upniv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -30)
 
 [node name="HUD" parent="." instance=ExtResource("8_1gmgk")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("9_gl38p")]
