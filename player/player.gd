@@ -51,8 +51,8 @@ func _physics_process(delta: float) -> void:
 func head_bob(vel: float, delta: float):
 	if head:
 		if vel > 1:
-			var bob_amount : float = 0.15
-			var bob_freq : float = 0.0075
+			var bob_amount : float = 0.10
+			var bob_freq : float = 0.01
 			head.position.y = lerp(head.position.y, def_head_pos.y + sin(Time.get_ticks_msec() * bob_freq) * bob_amount, 10 * delta)
 		else:
 			head.position.y = lerp(head.position.y, def_head_pos.y, 10 * delta)
