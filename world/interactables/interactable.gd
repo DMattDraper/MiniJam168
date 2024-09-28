@@ -11,17 +11,17 @@ class_name Interactable extends Area3D
 
 signal activated
 
-func interact():
+func interact(data: InteractionData):
 	if locked:
 		return
 	if wait_time > 0.0:
 		await get_tree().create_timer(wait_time).timeout
-		activate()
+		activate(data)
 	else:
-		activate()
+		activate(data)
 
-func activate():
-	activated.emit()
+func activate(data: InteractionData):
+	activated.emit(data)
 
 func set_lock(_locked: bool):
 	locked = _locked

@@ -4,8 +4,8 @@ class_name Orb extends Interactable
 
 var active = false
 
-func activate():
-	super()
+func activate(data: InteractionData):
+	super(data)
 	if !active:
 		GameManager.update_sight_color(color)
 		active = true

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://do6decwrpjtb0"]
+
+[ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_p2cxv"]
+[ext_resource type="Script" path="res://world/interactables/limited_interactable.gd" id="2_sv3jx"]
+
+[node name="LimitedInteractable" instance=ExtResource("1_p2cxv")]
+script = ExtResource("2_sv3jx")
+limit = 1

@@ -24,7 +24,7 @@ func interact():
 		return
 	var target = interact_ray.get_collider()
 	if is_instance_valid(target) and target is Interactable:
-		target.interact()
+		target.interact(InteractionData.new())
 
 func update_text(text: String):
 	if text == interact_text:

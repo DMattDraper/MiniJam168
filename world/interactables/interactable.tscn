@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://world/interactables/interactable.gd" id="1_jmpbq"]
 
-[node name="Interactable" type="Area3D"]
+[node name="Interactable" type="Area3D" groups=["interactables"]]
 script = ExtResource("1_jmpbq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

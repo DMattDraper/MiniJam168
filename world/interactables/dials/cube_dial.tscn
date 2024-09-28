@@ -47,6 +47,7 @@ size = Vector2(0.5, 0.5)
 
 [node name="CubeDial" instance=ExtResource("1_ctj7v")]
 script = ExtResource("2_ecj64")
+place = 0
 values = Array[String]([])
 outside_faces = 4.0
 
