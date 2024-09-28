@@ -1,9 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://c4jsgxd614kf7"]
+[gd_scene load_steps=21 format=3 uid="uid://c4jsgxd614kf7"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_hmrk8"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="1_sxvfc"]
 [ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="1_u3osk"]
-[ext_resource type="Texture2D" uid="uid://c567q2rmq1evg" path="res://world/environment/textures/Wood_02-256x256.png" id="3_1uvao"]
 [ext_resource type="Texture2D" uid="uid://bxbwcgpnovt51" path="res://world/environment/textures/Bricks_21-256x256.png" id="3_kap03"]
 [ext_resource type="PackedScene" uid="uid://cdmhvqnm7aqqr" path="res://world/interactables/orbs/red_orb.tscn" id="3_rvccb"]
 [ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="4_axmbm"]
@@ -49,18 +48,6 @@ size = Vector2(10, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_om5fu"]
 size = Vector3(10, 0, 20)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unrrb"]
-albedo_texture = ExtResource("3_1uvao")
-uv1_scale = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-uv1_world_triplanar = true
-texture_filter = 0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_o4swg"]
-lightmap_size_hint = Vector2i(52, 102)
-material = SubResource("StandardMaterial3D_unrrb")
-size = Vector2(10, 20)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp83l"]
 albedo_texture = ExtResource("3_kap03")
 metallic_specular = 0.0
@@ -92,26 +79,6 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D/StaticBody3D"]
-shape = SubResource("BoxShape3D_om5fu")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Terrain"]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 5, 0)
-mesh = SubResource("PlaneMesh_o4swg")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D7"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D7/StaticBody3D"]
-shape = SubResource("BoxShape3D_om5fu")
-
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="Terrain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
-mesh = SubResource("PlaneMesh_o4swg")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/MeshInstance3D9"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/MeshInstance3D9/StaticBody3D"]
 shape = SubResource("BoxShape3D_om5fu")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Terrain"]
