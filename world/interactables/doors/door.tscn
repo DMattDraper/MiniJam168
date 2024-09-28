@@ -112,11 +112,15 @@ shape = SubResource("BoxShape3D_vw7nk")
 [node name="Sprite3D" type="Sprite3D" parent="Graphics/LeftGate" index="1"]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 1, 1, 0)
 pixel_size = 0.0039
+alpha_cut = 1
+texture_filter = 0
 texture = ExtResource("3_ewefj")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Graphics/LeftGate" index="2"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, 1.74846e-07, 0, 2, 1, 1, 0)
 pixel_size = 0.0039
+alpha_cut = 1
+texture_filter = 0
 texture = ExtResource("3_ewefj")
 
 [node name="RightGate" type="StaticBody3D" parent="Graphics" index="1"]
@@ -125,11 +129,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 [node name="Sprite3D" type="Sprite3D" parent="Graphics/RightGate" index="0"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 1, 0)
 pixel_size = 0.0039
+alpha_cut = 1
+texture_filter = 0
 texture = ExtResource("3_ewefj")
 
 [node name="Sprite3D2" type="Sprite3D" parent="Graphics/RightGate" index="1"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, -2, -1, 1, 0)
 pixel_size = 0.0039
+alpha_cut = 1
+texture_filter = 0
 texture = ExtResource("3_ewefj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Graphics/RightGate" index="2"]
