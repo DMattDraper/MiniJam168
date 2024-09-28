@@ -14,14 +14,14 @@ signal activated
 func interact(data: InteractionData):
 	if locked:
 		return
-	if wait_time > 0.0:
-		await get_tree().create_timer(wait_time).timeout
-		activate(data)
-	else:
-		activate(data)
+	activate(data)
 
 func activate(data: InteractionData):
-	activated.emit(data)
+	if wait_time > 0.0:
+		await get_tree().create_timer(wait_time).timeout
+		activated.emit(data)
+	else:
+		activated.emit(data)
 
 func set_lock(_locked: bool):
 	locked = _locked

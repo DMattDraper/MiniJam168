@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4jsgxd614kf7"]
+[gd_scene load_steps=23 format=3 uid="uid://c4jsgxd614kf7"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_hmrk8"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="1_sxvfc"]
@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://0dwqip03vn5s" path="res://display/ui/hud.tscn" id="6_txs8x"]
 [ext_resource type="PackedScene" uid="uid://ifjxle76vc2l" path="res://world/interactables/dials/cube_dial.tscn" id="8_1hnom"]
 [ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="9_fmbyu"]
+[ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="12_s2y8q"]
 [ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="13_qa1kj"]
+[ext_resource type="AudioStream" uid="uid://dxesxy6hm5iav" path="res://sound/sfx/fart.ogg" id="13_rwrtb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ikmvk"]
 sky_top_color = Color(0.172549, 0.54902, 0.627451, 1)
@@ -182,7 +184,7 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_om5fu")
 
 [node name="Door" parent="Terrain" instance=ExtResource("5_015sl")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 target_name = "door"
 
 [node name="Player" parent="." instance=ExtResource("1_sxvfc")]
@@ -207,28 +209,47 @@ target_name = "blue"
 [node name="HUD" parent="." instance=ExtResource("6_txs8x")]
 
 [node name="HexDial" parent="." instance=ExtResource("8_1hnom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.98764, 1, 6.75961)
-values = Array[String](["A", "B", "C", "D"])
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.98764, 1, 7.75961)
+value = "OPEN"
 target = "word_counter"
 
 [node name="HexDial2" parent="." instance=ExtResource("8_1hnom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123596, 1, 6.75961)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.98764, 1, 6.75961)
 place = 1
-values = Array[String](["A", "B", "C", "D"])
+value = "OPEN"
 target = "word_counter"
 
 [node name="HexDial3" parent="." instance=ExtResource("8_1hnom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01236, 1, 6.75961)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.98764, 1, 5.75961)
 place = 2
-values = Array[String](["A", "B", "C", "D"])
+value = "OPEN"
+target = "word_counter"
+
+[node name="HexDial4" parent="." instance=ExtResource("8_1hnom")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.98764, 1, 4.75961)
+place = 3
+value = "OPEN"
 target = "word_counter"
 
 [node name="PuzzleInteractable" parent="." instance=ExtResource("9_fmbyu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123596, 1, 6.75961)
-target_string = "BBB"
-character_array = "AAA"
+target_string = "OPEN"
+character_array = "OOOO"
 target = "limited"
 target_name = "word_counter"
+
+[node name="PuzzleInteractable2" parent="." instance=ExtResource("9_fmbyu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123596, 1, 6.75961)
+target_string = "POOP"
+character_array = "OOOO"
+target = "poop"
+target_name = "word_counter"
+
+[node name="AudioEmitter" parent="." instance=ExtResource("12_s2y8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 6.31353)
+audio = ExtResource("13_rwrtb")
+target_name = "poop"
+wait_time = 0.5
 
 [node name="LimitedInteractable" parent="." instance=ExtResource("13_qa1kj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)

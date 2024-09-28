@@ -3,7 +3,7 @@ class_name Dial extends Interactable
 @onready var graphics: Node3D = $Graphics
 
 @export var place := 0
-@export var values: Array[String]
+@export var value := ""
 var index = 0
 
 @export var outside_faces: float
@@ -22,11 +22,11 @@ func activate(data: InteractionData):
 	rotate_graphics()
 	
 	index += 1
-	if index >= values.size():
+	if index >= value.length():
 		index = 0
 	
 	data.index = place
-	data.value = values[index]
+	data.value = value[index]
 	super(data)
 
 func rotate_graphics():

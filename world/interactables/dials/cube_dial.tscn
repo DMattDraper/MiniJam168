@@ -1,45 +1,58 @@
-[gd_scene load_steps=18 format=3 uid="uid://ifjxle76vc2l"]
+[gd_scene load_steps=20 format=3 uid="uid://ifjxle76vc2l"]
 
 [ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_ctj7v"]
 [ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="2_ecj64"]
-[ext_resource type="Texture2D" uid="uid://qhrvrg66oa1d" path="res://world/environment/textures/temp_a.png" id="3_jk86d"]
-[ext_resource type="Texture2D" uid="uid://de8m2difg3w6u" path="res://world/environment/textures/temp_c.png" id="4_1mblb"]
-[ext_resource type="Texture2D" uid="uid://cmcbd4tk7riju" path="res://world/environment/textures/temp_b.png" id="4_mxfad"]
+[ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="3_38oxw"]
+[ext_resource type="Texture2D" uid="uid://cbhlgcr4rkgfw" path="res://world/environment/textures/dial_faces/basic/o.png" id="4_4nuuc"]
 [ext_resource type="Script" path="res://world/interactables/multi_color_object.gd" id="4_re1l1"]
-[ext_resource type="Texture2D" uid="uid://cbw12aq4jux8g" path="res://world/environment/textures/temp_d.png" id="5_1ryfi"]
+[ext_resource type="Texture2D" uid="uid://cb4fecg67pdxr" path="res://world/environment/textures/dial_faces/basic/p.png" id="6_7vxhd"]
+[ext_resource type="Texture2D" uid="uid://bletdcn6r3sbf" path="res://world/environment/textures/dial_faces/basic/e.png" id="7_3tkcw"]
+[ext_resource type="Texture2D" uid="uid://cevl8yp7nvagr" path="res://world/environment/textures/dial_faces/basic/n.png" id="8_rx8hj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dgmxl"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjxf1"]
+albedo_texture = ExtResource("3_38oxw")
+metallic_specular = 0.0
+texture_filter = 0
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_gbeu0"]
+material = SubResource("StandardMaterial3D_cjxf1")
 size = Vector2(0.5, 0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi3gj"]
-albedo_texture = ExtResource("3_jk86d")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ti2io"]
+albedo_texture = ExtResource("4_4nuuc")
 metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cx1mo"]
-material = SubResource("StandardMaterial3D_oi3gj")
+material = SubResource("StandardMaterial3D_ti2io")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ht34g"]
-albedo_texture = ExtResource("4_mxfad")
+albedo_texture = ExtResource("6_7vxhd")
 metallic_specular = 0.0
+texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qg8oo"]
 material = SubResource("StandardMaterial3D_ht34g")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4ius"]
-albedo_texture = ExtResource("4_1mblb")
+albedo_texture = ExtResource("7_3tkcw")
 metallic_specular = 0.0
+texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_spu8r"]
 material = SubResource("StandardMaterial3D_f4ius")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yo0p"]
-albedo_texture = ExtResource("5_1ryfi")
+albedo_texture = ExtResource("8_rx8hj")
 metallic_specular = 0.0
+texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ggdcb"]
 material = SubResource("StandardMaterial3D_8yo0p")
@@ -48,7 +61,7 @@ size = Vector2(0.5, 0.5)
 [node name="CubeDial" instance=ExtResource("1_ctj7v")]
 script = ExtResource("2_ecj64")
 place = 0
-values = Array[String]([])
+value = ""
 outside_faces = 4.0
 
 [node name="CollisionShape3D" parent="." index="0"]
@@ -67,10 +80,6 @@ mesh = SubResource("PlaneMesh_gbeu0")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_cx1mo")
 script = ExtResource("4_re1l1")
-sprite = ExtResource("3_jk86d")
-red_sprite = ExtResource("4_mxfad")
-green_sprite = ExtResource("4_1mblb")
-blue_sprite = ExtResource("5_1ryfi")
 
 [node name="FaceB" type="MeshInstance3D" parent="Graphics" index="3" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)

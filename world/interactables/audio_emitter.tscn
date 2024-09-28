@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2iwhd1btw3nv"]
+
+[ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_u6wcp"]
+[ext_resource type="Script" path="res://world/interactables/audio_emitter.gd" id="2_mtnwm"]
+
+[node name="AudioEmitter" instance=ExtResource("1_u6wcp")]
+script = ExtResource("2_mtnwm")
+audio = null
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." index="2"]
+attenuation_model = 1
+bus = &"SFX"
+
+[connection signal="activated" from="." to="AudioStreamPlayer" method="play"]
