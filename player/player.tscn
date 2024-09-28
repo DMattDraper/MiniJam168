@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjkrnxpftqln6"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_hhvl7"]
+[ext_resource type="PackedScene" uid="uid://of8r6nv4lqt5" path="res://player/character_mover.tscn" id="2_mitfl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v4kk7"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_hhvl7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_v4kk7")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="CharacterMover" parent="." instance=ExtResource("2_mitfl")]
+max_speed = 10.0
+move_accel = 3.0
