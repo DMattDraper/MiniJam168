@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://0dwqip03vn5s" path="res://display/ui/hud.tscn" id="6_txs8x"]
 [ext_resource type="PackedScene" uid="uid://ifjxle76vc2l" path="res://world/interactables/dials/cube_dial.tscn" id="8_1hnom"]
 [ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="9_fmbyu"]
-[ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="12_s2y8q"]
+[ext_resource type="PackedScene" path="res://world/interactables/audio_emitter.tscn" id="12_s2y8q"]
 [ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="13_qa1kj"]
 [ext_resource type="AudioStream" uid="uid://dxesxy6hm5iav" path="res://sound/sfx/fart.ogg" id="13_rwrtb"]
 
@@ -21,12 +21,12 @@ sky_horizon_color = Color(0.647059, 0.729412, 0.768627, 1)
 ground_bottom_color = Color(0.2, 0.207843, 0.133333, 1)
 ground_horizon_color = Color(0.415686, 0.454902, 0.45098, 1)
 
-[sub_resource type="Sky" id="Sky_60w8l"]
+[sub_resource type="Sky" id="Sky_2yc76"]
 sky_material = SubResource("ProceduralSkyMaterial_ikmvk")
 
 [sub_resource type="Environment" id="Environment_f8ahi"]
 background_mode = 2
-sky = SubResource("Sky_60w8l")
+sky = SubResource("Sky_2yc76")
 ambient_light_source = 2
 ambient_light_color = Color(0.160784, 0.160784, 0.160784, 1)
 ssao_intensity = 5.0
@@ -35,7 +35,7 @@ sdfgi_read_sky_light = false
 sdfgi_y_scale = 0
 volumetric_fog_density = 0.025
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32q51"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqkgi"]
 albedo_texture = ExtResource("1_u3osk")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.25, 0.25, 0.25)
@@ -44,7 +44,7 @@ uv1_world_triplanar = true
 texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cwnd5"]
-material = SubResource("StandardMaterial3D_32q51")
+material = SubResource("StandardMaterial3D_vqkgi")
 size = Vector2(10, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_om5fu"]
