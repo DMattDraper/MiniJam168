@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://c4jsgxd614kf7"]
+[gd_scene load_steps=68 format=3 uid="uid://c4jsgxd614kf7"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_hmrk8"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="1_sxvfc"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c52mmd30v03pb" path="res://world/environment/textures/dial_faces/green/p.png" id="20_4bj7w"]
 [ext_resource type="Texture2D" uid="uid://dlq7nn3682hlw" path="res://world/environment/textures/dial_faces/green/e.png" id="21_cm3wu"]
 [ext_resource type="Texture2D" uid="uid://bmftfjl7rj1ke" path="res://world/environment/textures/dial_faces/green/n.png" id="22_u14s0"]
+[ext_resource type="AudioStream" uid="uid://bhyo3w5ain177" path="res://sound/music/soundtrack.ogg" id="24_7i8ia"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32q51"]
 albedo_texture = ExtResource("1_u3osk")
@@ -574,3 +575,9 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.
 mesh = SubResource("PlaneMesh_5domr")
 script = ExtResource("13_vnfpr")
 green_sprite = ExtResource("22_u14s0")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_7i8ia")
+volume_db = -6.0
+autoplay = true
+bus = &"Music"
