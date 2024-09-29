@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfefluvtdbu2q"
-path.s3tc="res://.godot/imported/1.png-11c81492fc0af6abd1a87159699e559d.s3tc.ctex"
+uid="uid://dbsrvigm3u8yl"
+path.s3tc="res://.godot/imported/portal_portal_frame.png-635c7ce1587f6d3306535dba159f07b2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "9182b9c4c97c5a65438f3cb7bd8553dd"
+}
 
 [deps]
 
-source_file="res://world/environment/textures/dial_faces/green/1.png"
-dest_files=["res://.godot/imported/1.png-11c81492fc0af6abd1a87159699e559d.s3tc.ctex"]
+source_file="res://world/environment/portal_portal_frame.png"
+dest_files=["res://.godot/imported/portal_portal_frame.png-635c7ce1587f6d3306535dba159f07b2.s3tc.ctex"]
 
 [params]
 

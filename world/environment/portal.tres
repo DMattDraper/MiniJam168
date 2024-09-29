@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2glxsh30wdjl"]
+
+[ext_resource type="Texture2D" uid="uid://dbsrvigm3u8yl" path="res://world/environment/portal_portal_frame.png" id="1_hc60g"]
+
+[resource]
+albedo_texture = ExtResource("1_hc60g")
+metallic_specular = 0.0
+texture_filter = 0

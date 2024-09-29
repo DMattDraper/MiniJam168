@@ -43,6 +43,8 @@ hud=""
 orb=""
 interactables=""
 pause_menu=""
+hidden_text=""
+false_walls=""
 
 [input]
 

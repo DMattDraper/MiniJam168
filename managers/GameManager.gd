@@ -6,6 +6,7 @@ var default_time_scale := 1.0
 var paused := false
 
 func _ready() -> void:
+	Engine.time_scale = default_time_scale
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func update_sight_color(color: Sight.COLORS):
@@ -20,8 +21,17 @@ func update_sight_color(color: Sight.COLORS):
 	var colored_objects = get_tree().get_nodes_in_group("colored")
 	for obj: MultiColorObject in colored_objects:
 		obj.update_sprite(color)
+	
+	var hidden_text = get_tree().get_nodes_in_group("hidden_text")
+	for text: HiddenText in hidden_text:
+		text.update(color)
+	
+	var false_walls = get_tree().get_nodes_in_group("false_walls")
+	for wall: FalseWall in false_walls:
+		wall.update(color)
 
 func reset():
+	Engine.time_scale = default_time_scale
 	update_sight_color(Sight.COLORS.NONE)
 
 func handle_pause():

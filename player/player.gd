@@ -29,7 +29,7 @@ func _input(event: InputEvent) -> void:
 		head.rotation_degrees.x -= event.relative.y * mouse_sensitivity_v
 		head.rotation_degrees.x = clamp(head.rotation_degrees.x, -90, 90)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:	
 	if Input.is_action_just_pressed("pause"):
 		GameManager.handle_pause()
 	if Input.is_action_just_pressed("quit"):
@@ -38,6 +38,9 @@ func _process(delta: float) -> void:
 		GameManager.restart()
 	if Input.is_action_just_pressed("fullscreen"):
 		GameManager.fullscreen()
+
+	if GameManager.paused:
+		return
 
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var move_dir = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

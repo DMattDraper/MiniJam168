@@ -1,29 +1,56 @@
-[gd_scene load_steps=150 format=3 uid="uid://ml2uipml5302"]
+[gd_scene load_steps=290 format=3 uid="uid://ml2uipml5302"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_6xsf4"]
 [ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="1_7ifcb"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="2_waxnw"]
 [ext_resource type="Texture2D" uid="uid://bxbwcgpnovt51" path="res://world/environment/textures/Bricks_21-256x256.png" id="3_3cejg"]
+[ext_resource type="Texture2D" uid="uid://beypam78ffvnm" path="res://world/environment/textures/dial_faces/green/t.png" id="3_i6h71"]
+[ext_resource type="Texture2D" uid="uid://7alrvqnyir8p" path="res://world/environment/textures/dial_faces/red/e.png" id="3_njydr"]
 [ext_resource type="Texture2D" uid="uid://s7j20d3xkw62" path="res://world/environment/textures/Bricks_17-256x256.png" id="4_uf2kf"]
 [ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="5_7e7gq"]
 [ext_resource type="PackedScene" uid="uid://cdmhvqnm7aqqr" path="res://world/interactables/orbs/red_orb.tscn" id="5_8exi0"]
 [ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="6_8ldkl"]
 [ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="6_37omq"]
 [ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="6_p4c5o"]
+[ext_resource type="PackedScene" uid="uid://c8ldqf61a8ntp" path="res://world/false_wall.tscn" id="6_v0qgq"]
 [ext_resource type="PackedScene" uid="uid://g8ungw4v6h7e" path="res://world/interactables/orbs/blue_orb.tscn" id="7_e60ih"]
 [ext_resource type="PackedScene" uid="uid://0dwqip03vn5s" path="res://display/ui/hud.tscn" id="8_1gmgk"]
 [ext_resource type="Script" path="res://world/interactables/multi_color_object.gd" id="8_llyi4"]
 [ext_resource type="PackedScene" uid="uid://ckhby5fy7ip2n" path="res://display/world_environment.tscn" id="9_gl38p"]
 [ext_resource type="PackedScene" uid="uid://cyl3asmv6k1bp" path="res://world/interactables/alert_interactable.tscn" id="10_jw32f"]
 [ext_resource type="PackedScene" uid="uid://cbg8t3jy7e3gl" path="res://world/interactables/doors/door.tscn" id="10_ta3e0"]
+[ext_resource type="PackedScene" uid="uid://w6nwurbrjqdf" path="res://world/portal.tscn" id="10_yujxw"]
+[ext_resource type="PackedScene" uid="uid://djetmysyhd33n" path="res://world/interactables/area_trigger.tscn" id="11_j4lfh"]
+[ext_resource type="PackedScene" uid="uid://b27qqtsg80y12" path="res://world/interactables/end_level.tscn" id="12_dw6yw"]
 [ext_resource type="AudioStream" uid="uid://cb2y3w3kvfsuh" path="res://sound/sfx/world/stone_door.ogg" id="13_p2qsj"]
+[ext_resource type="Texture2D" uid="uid://bmftfjl7rj1ke" path="res://world/environment/textures/dial_faces/green/n.png" id="15_mvirb"]
 [ext_resource type="Texture2D" uid="uid://chc484eowk83d" path="res://world/environment/textures/dial_faces/red/p.png" id="15_wskad"]
 [ext_resource type="Texture2D" uid="uid://mpk25sdbhtm7" path="res://world/environment/textures/dial_faces/red/o.png" id="19_4xnq0"]
 [ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="19_8t4vo"]
+[ext_resource type="Texture2D" uid="uid://c52mmd30v03pb" path="res://world/environment/textures/dial_faces/green/p.png" id="19_56x18"]
 [ext_resource type="PackedScene" uid="uid://dengfjyuk48sq" path="res://display/ui/pause_menu.tscn" id="19_jpcgh"]
 [ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="19_xf24e"]
 [ext_resource type="AudioStream" uid="uid://dxesxy6hm5iav" path="res://sound/sfx/fart.ogg" id="20_e6il5"]
+[ext_resource type="Texture2D" uid="uid://ba1igjsw8mdbk" path="res://world/environment/textures/dial_faces/green/o.png" id="20_qk76r"]
 [ext_resource type="AudioStream" uid="uid://bhyo3w5ain177" path="res://sound/music/soundtrack.ogg" id="21_sv480"]
+[ext_resource type="Texture2D" uid="uid://c13mglvoa5cfv" path="res://world/environment/textures/dial_faces/red/g.png" id="22_fqg5d"]
+[ext_resource type="Script" path="res://scenes/hidden_text.gd" id="23_4yxha"]
+[ext_resource type="Texture2D" uid="uid://yh1ekltl2emc" path="res://world/environment/textures/dial_faces/green/i.png" id="25_4615y"]
+[ext_resource type="Texture2D" uid="uid://cq5ejkqbvo0f8" path="res://world/environment/textures/dial_faces/green/m.png" id="26_oes5v"]
+[ext_resource type="Texture2D" uid="uid://dlq7nn3682hlw" path="res://world/environment/textures/dial_faces/green/e.png" id="27_t1qt4"]
+[ext_resource type="Texture2D" uid="uid://bq4tynkhjm3bv" path="res://world/environment/textures/dial_faces/red/1.png" id="28_wmyem"]
+[ext_resource type="Texture2D" uid="uid://cwwigff1b63op" path="res://world/environment/textures/dial_faces/red/2.png" id="29_75yvf"]
+[ext_resource type="Texture2D" uid="uid://jocog141oslo" path="res://world/environment/textures/dial_faces/blue/s.png" id="29_qjmf6"]
+[ext_resource type="Texture2D" uid="uid://bmex1k3j87jjy" path="res://world/environment/textures/dial_faces/red/3.png" id="30_k8kbu"]
+[ext_resource type="Texture2D" uid="uid://bokpebjqaflh3" path="res://world/environment/textures/dial_faces/blue/a.png" id="31_15ke0"]
+[ext_resource type="Texture2D" uid="uid://cs028hn6bdqv7" path="res://world/environment/textures/dial_faces/red/4.png" id="31_yca3a"]
+[ext_resource type="Texture2D" uid="uid://c5yah6uf11n8q" path="res://world/environment/textures/dial_faces/blue/n.png" id="33_airtq"]
+[ext_resource type="Texture2D" uid="uid://cckw6b4wtyila" path="res://world/environment/textures/dial_faces/red/d.png" id="33_b1npb"]
+[ext_resource type="Texture2D" uid="uid://hllraewbxxq2" path="res://world/environment/textures/dial_faces/red/r.png" id="34_hm6dd"]
+[ext_resource type="Texture2D" uid="uid://bgtmrx4l0pdx2" path="res://world/environment/textures/dial_faces/red/a.png" id="35_4j218"]
+[ext_resource type="Texture2D" uid="uid://bpb3ocro848ww" path="res://world/environment/textures/dial_faces/blue/d.png" id="35_ka4ps"]
+[ext_resource type="Texture2D" uid="uid://b8xncb0dixo06" path="res://world/environment/textures/dial_faces/red/n.png" id="36_bctws"]
+[ext_resource type="PackedScene" uid="uid://b5rk16hpsh5fx" path="res://world/interactables/counter_interactable.tscn" id="36_tnkja"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32q51"]
 albedo_texture = ExtResource("1_7ifcb")
@@ -90,8 +117,8 @@ size = Vector3(0.5, 5, 7.5)
 material = SubResource("StandardMaterial3D_wpgyh")
 size = Vector3(0.5, 5, 9)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_m2vdn"]
-size = Vector3(0.5, 5, 25)
+[sub_resource type="BoxShape3D" id="BoxShape3D_72r5m"]
+size = Vector3(0.5, 5, 9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1a0al"]
 size = Vector3(0.5, 5, 20)
@@ -117,12 +144,21 @@ size = Vector3(0.5, 5, 7.5)
 material = SubResource("StandardMaterial3D_wpgyh")
 size = Vector3(0.5, 5, 6.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mrxbk"]
+size = Vector3(0.5, 5, 8.5)
+
 [sub_resource type="BoxMesh" id="BoxMesh_84vs2"]
 material = SubResource("StandardMaterial3D_wpgyh")
 size = Vector3(0.5, 5, 17)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ee8cj"]
+size = Vector3(0.5, 5, 17)
+
 [sub_resource type="BoxMesh" id="BoxMesh_8hgxh"]
 material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 5, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rtbvf"]
 size = Vector3(0.5, 5, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bv5mu"]
@@ -147,6 +183,20 @@ size = Vector3(0.5, 5, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6q0bu"]
 size = Vector3(0.5, 5, 7.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dn3k7"]
+material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wxsc3"]
+size = Vector3(0.5, 5, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ctvrh"]
+material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4iktm"]
+size = Vector3(0.5, 5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mis5g"]
 material = SubResource("StandardMaterial3D_wpgyh")
@@ -237,15 +287,15 @@ size = Vector3(0.5, 2.5, 10)
 material = SubResource("StandardMaterial3D_wpgyh")
 size = Vector3(0.5, 2.5, 27)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1pet1"]
-size = Vector3(0.5, 2.5, 10)
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4j1k"]
+size = Vector3(0.5, 2.5, 27)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8aeeo"]
 material = SubResource("StandardMaterial3D_wpgyh")
 size = Vector3(0.5, 2.5, 27)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_x8o4o"]
-size = Vector3(0.5, 2.5, 10)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebhmc"]
+size = Vector3(0.5, 2.5, 27)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dppyp"]
 albedo_texture = ExtResource("4_uf2kf")
@@ -296,6 +346,9 @@ size = Vector3(0.5, 2.5, 12)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1h107"]
 size = Vector3(0.5, 2.5, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qanh8"]
+size = Vector3(2, 2.80371, 0.1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dgmxl"]
 
@@ -350,18 +403,18 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_jmcuu")
 size = Vector2(0.5, 0.5)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_80s56"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_42k8e"]
 load_path = "res://.godot/imported/n.png-1c5ba2f860a4921d935fb057d78dc013.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8nod"]
-albedo_texture = SubResource("CompressedTexture2D_80s56")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vrd8"]
+albedo_texture = SubResource("CompressedTexture2D_42k8e")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
 texture_filter = 0
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_sdy7c"]
-material = SubResource("StandardMaterial3D_d8nod")
+[sub_resource type="PlaneMesh" id="PlaneMesh_8qucq"]
+material = SubResource("StandardMaterial3D_5vrd8")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ondc6"]
@@ -392,18 +445,18 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_lhfvq")
 size = Vector2(0.5, 0.5)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n8eoh"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3o1u6"]
 load_path = "res://.godot/imported/e.png-958b1fab1a2f653209223c75ec47a9b0.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_655vx"]
-albedo_texture = SubResource("CompressedTexture2D_n8eoh")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2r3o"]
+albedo_texture = SubResource("CompressedTexture2D_3o1u6")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
 texture_filter = 0
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_45ypc"]
-material = SubResource("StandardMaterial3D_655vx")
+[sub_resource type="PlaneMesh" id="PlaneMesh_44i6r"]
+material = SubResource("StandardMaterial3D_k2r3o")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ej5wd"]
@@ -434,18 +487,18 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_hstel")
 size = Vector2(0.5, 0.5)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_myamt"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x4ekj"]
 load_path = "res://.godot/imported/p.png-da6243522ae51bc9d7a49dc1e8984908.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2l4m"]
-albedo_texture = SubResource("CompressedTexture2D_myamt")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0mes3"]
+albedo_texture = SubResource("CompressedTexture2D_x4ekj")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
 texture_filter = 0
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_gwcs1"]
-material = SubResource("StandardMaterial3D_b2l4m")
+[sub_resource type="PlaneMesh" id="PlaneMesh_1qa71"]
+material = SubResource("StandardMaterial3D_0mes3")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bi4px"]
@@ -476,18 +529,18 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_qlgw4")
 size = Vector2(0.5, 0.5)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x7npc"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e4lwd"]
 load_path = "res://.godot/imported/o.png-1d7411663413e5e373e18b930f198f5a.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4whbb"]
-albedo_texture = SubResource("CompressedTexture2D_x7npc")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8qh7"]
+albedo_texture = SubResource("CompressedTexture2D_e4lwd")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
 texture_filter = 0
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_f2ei0"]
-material = SubResource("StandardMaterial3D_4whbb")
+[sub_resource type="PlaneMesh" id="PlaneMesh_bmobh"]
+material = SubResource("StandardMaterial3D_f8qh7")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6eh5m"]
@@ -532,6 +585,489 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_tkdos")
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_w84p5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvmv0"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_beigr"]
+material = SubResource("StandardMaterial3D_fvmv0")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ti2io"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cx1mo"]
+material = SubResource("StandardMaterial3D_ti2io")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hm24"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fybrq"]
+material = SubResource("StandardMaterial3D_5hm24")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_isnko"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilyiu"]
+albedo_texture = SubResource("CompressedTexture2D_isnko")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tcowd"]
+material = SubResource("StandardMaterial3D_ilyiu")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bbtny"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4018"]
+albedo_texture = SubResource("CompressedTexture2D_bbtny")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mwism"]
+material = SubResource("StandardMaterial3D_b4018")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_k60mc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28n3e"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dl1cr"]
+material = SubResource("StandardMaterial3D_28n3e")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obsy3"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d0aok"]
+material = SubResource("StandardMaterial3D_obsy3")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_blbef"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax22q"]
+albedo_texture = SubResource("CompressedTexture2D_blbef")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vap3d"]
+material = SubResource("StandardMaterial3D_ax22q")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnlc3"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7wij"]
+albedo_texture = SubResource("CompressedTexture2D_hnlc3")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qp7ft"]
+material = SubResource("StandardMaterial3D_y7wij")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gxw20"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4gxv"]
+albedo_texture = SubResource("CompressedTexture2D_gxw20")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hj7tr"]
+material = SubResource("StandardMaterial3D_t4gxv")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_clceq"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqi8j"]
+albedo_texture = SubResource("CompressedTexture2D_clceq")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_onwe6"]
+material = SubResource("StandardMaterial3D_sqi8j")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hohb1"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2u4t7"]
+material = SubResource("StandardMaterial3D_hohb1")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_acowj"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yi5o2"]
+albedo_texture = SubResource("CompressedTexture2D_acowj")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hmd2b"]
+material = SubResource("StandardMaterial3D_yi5o2")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f0nlj"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mifyn"]
+albedo_texture = SubResource("CompressedTexture2D_f0nlj")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2ig5f"]
+material = SubResource("StandardMaterial3D_mifyn")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bx8pb"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m82qy"]
+albedo_texture = SubResource("CompressedTexture2D_bx8pb")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s7hco"]
+material = SubResource("StandardMaterial3D_m82qy")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8q0k"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qu80g"]
+albedo_texture = SubResource("CompressedTexture2D_t8q0k")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hcdkg"]
+material = SubResource("StandardMaterial3D_qu80g")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ed4vu"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q4pcf"]
+albedo_texture = SubResource("CompressedTexture2D_ed4vu")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_deprm"]
+material = SubResource("StandardMaterial3D_q4pcf")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ui6to"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bbllb"]
+albedo_texture = SubResource("CompressedTexture2D_ui6to")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_y003x"]
+material = SubResource("StandardMaterial3D_bbllb")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xowqa"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ljagx"]
+albedo_texture = SubResource("CompressedTexture2D_xowqa")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c1yry"]
+material = SubResource("StandardMaterial3D_ljagx")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sed8g"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvcg6"]
+albedo_texture = SubResource("CompressedTexture2D_sed8g")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eerja"]
+material = SubResource("StandardMaterial3D_mvcg6")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_83lkh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjq72"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_psl1x"]
+material = SubResource("StandardMaterial3D_tjq72")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dvyhv"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn1mj"]
+albedo_texture = SubResource("CompressedTexture2D_dvyhv")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dylqj"]
+material = SubResource("StandardMaterial3D_sn1mj")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1l6q4"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8b3f"]
+albedo_texture = SubResource("CompressedTexture2D_1l6q4")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_joi25"]
+material = SubResource("StandardMaterial3D_o8b3f")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0r0r"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66mfn"]
+albedo_texture = SubResource("CompressedTexture2D_l0r0r")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w268d"]
+material = SubResource("StandardMaterial3D_66mfn")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iei35"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odcmn"]
+albedo_texture = SubResource("CompressedTexture2D_iei35")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xjxi7"]
+material = SubResource("StandardMaterial3D_odcmn")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rvjh0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eatdm"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jettj"]
+material = SubResource("StandardMaterial3D_eatdm")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mmian"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btalt"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3pm4r"]
+material = SubResource("StandardMaterial3D_btalt")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvqk3"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5u8yb"]
+material = SubResource("StandardMaterial3D_mvqk3")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mx1hr"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj1h3"]
+albedo_texture = SubResource("CompressedTexture2D_mx1hr")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bwj6y"]
+material = SubResource("StandardMaterial3D_fj1h3")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i7g58"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5o7i"]
+albedo_texture = SubResource("CompressedTexture2D_i7g58")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hkt70"]
+material = SubResource("StandardMaterial3D_h5o7i")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ic21e"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eui2c"]
+albedo_texture = SubResource("CompressedTexture2D_ic21e")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s8le3"]
+material = SubResource("StandardMaterial3D_eui2c")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqdye"]
+albedo_texture = ExtResource("6_8ldkl")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_30lto"]
+material = SubResource("StandardMaterial3D_gqdye")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ncbi"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukw3c"]
+albedo_texture = SubResource("CompressedTexture2D_5ncbi")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j3rs2"]
+material = SubResource("StandardMaterial3D_ukw3c")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wtb4n"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohkt5"]
+albedo_texture = SubResource("CompressedTexture2D_wtb4n")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jhk0r"]
+material = SubResource("StandardMaterial3D_ohkt5")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qgcfw"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_raubd"]
+albedo_texture = SubResource("CompressedTexture2D_qgcfw")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_um4gf"]
+material = SubResource("StandardMaterial3D_raubd")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tf31q"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mf5y0"]
+albedo_texture = SubResource("CompressedTexture2D_tf31q")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cr8sn"]
+material = SubResource("StandardMaterial3D_mf5y0")
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kq5ud"]
+load_path = "res://.godot/imported/dial_face.png-b0b6f18d4d7dc19f67d432a4fa347a18.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4q3vg"]
+albedo_texture = SubResource("CompressedTexture2D_kq5ud")
+metallic_specular = 0.0
+emission_enabled = true
+emission_energy_multiplier = 2.0
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_06y5l"]
+material = SubResource("StandardMaterial3D_4q3vg")
+size = Vector2(0.5, 0.5)
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_6xsf4")
 
@@ -539,6 +1075,7 @@ script = ExtResource("1_6xsf4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
 
 [node name="Terrain" type="Node3D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Ground" type="MeshInstance3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25)
@@ -549,6 +1086,11 @@ skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_ve5tq")
+
+[node name="Ground2" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, -25)
+mesh = SubResource("PlaneMesh_7ioqj")
+skeleton = NodePath("../../..")
 
 [node name="PuzzleRoom1" type="Node3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.146784, 0, 0.0108356)
@@ -583,6 +1125,26 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom1/Wall13/StaticBody3D"]
 shape = SubResource("BoxShape3D_5pq5p")
 
+[node name="Wall18" type="MeshInstance3D" parent="Terrain/PuzzleRoom1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.125, 2.5, 23.5)
+mesh = SubResource("BoxMesh_y7p22")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom1/Wall18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom1/Wall18/StaticBody3D"]
+shape = SubResource("BoxShape3D_5pq5p")
+
+[node name="Wall19" type="MeshInstance3D" parent="Terrain/PuzzleRoom1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.125, 2.5, -26.5)
+mesh = SubResource("BoxMesh_y7p22")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom1/Wall19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom1/Wall19/StaticBody3D"]
+shape = SubResource("BoxShape3D_5pq5p")
+
 [node name="Wall15" type="MeshInstance3D" parent="Terrain/PuzzleRoom1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1468, 2.5, 19.7392)
 mesh = SubResource("BoxMesh_74jw8")
@@ -602,10 +1164,6 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom1/Wall14/StaticBody3D"]
 shape = SubResource("BoxShape3D_2iljh")
-
-[node name="Door" parent="Terrain/PuzzleRoom1" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.349, 0, 19.7092)
-target_name = "start_doors"
 
 [node name="PuzzleRoom2" type="Node3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
@@ -628,7 +1186,7 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom2/Wall22"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom2/Wall22/StaticBody3D"]
-shape = SubResource("BoxShape3D_m2vdn")
+shape = SubResource("BoxShape3D_72r5m")
 
 [node name="Wall24" type="MeshInstance3D" parent="Terrain/PuzzleRoom2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 2.5, -40.75)
@@ -660,9 +1218,6 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom2/Wall26/StaticBody3D"]
 shape = SubResource("BoxShape3D_1to3u")
-
-[node name="Door" parent="Terrain/PuzzleRoom2" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.3371, 0, -40.7693)
 
 [node name="PuzzleRoom3" type="Node3D" parent="Terrain"]
 
@@ -704,7 +1259,7 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom3/Wall13"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom3/Wall13/StaticBody3D"]
-shape = SubResource("BoxShape3D_dti0r")
+shape = SubResource("BoxShape3D_mrxbk")
 
 [node name="Wall14" type="MeshInstance3D" parent="Terrain/PuzzleRoom3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.75, 2.5, 21.6433)
@@ -714,7 +1269,7 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom3/Wall14"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom3/Wall14/StaticBody3D"]
-shape = SubResource("BoxShape3D_dti0r")
+shape = SubResource("BoxShape3D_ee8cj")
 
 [node name="Wall15" type="MeshInstance3D" parent="Terrain/PuzzleRoom3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.75, 2.5, 19.82)
@@ -724,8 +1279,7 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom3/Wall15"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom3/Wall15/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
-shape = SubResource("BoxShape3D_dti0r")
+shape = SubResource("BoxShape3D_rtbvf")
 
 [node name="Wall27" type="MeshInstance3D" parent="Terrain/PuzzleRoom3"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.5, 2.5, 9.5)
@@ -767,9 +1321,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom3/Wall11/StaticBody3D"]
 shape = SubResource("BoxShape3D_rnbmv")
 
-[node name="Door" parent="Terrain/PuzzleRoom3" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.8324, -0.0182776, 19.7504)
-
 [node name="PuzzleRoom4" type="Node3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 
@@ -782,6 +1333,226 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall31/StaticBody3D"]
 shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall33" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.75, 2.5, -36.5979)
+mesh = SubResource("BoxMesh_4rag4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall33"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall33/StaticBody3D"]
+shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall38" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36.75, 2.5, -44.5979)
+mesh = SubResource("BoxMesh_4rag4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall38"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall38/StaticBody3D"]
+shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall47" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.75, 2.5, -34.5979)
+mesh = SubResource("BoxMesh_4rag4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall47"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall47/StaticBody3D"]
+shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall34" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.75, 2.5, -44.5979)
+mesh = SubResource("BoxMesh_4rag4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall34"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall34/StaticBody3D"]
+shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall51" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.75, 2.5, -46.5979)
+mesh = SubResource("BoxMesh_4rag4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall51"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall51/StaticBody3D"]
+shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall52" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 48.75, 2.5, -42.5979)
+mesh = SubResource("BoxMesh_4rag4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall52"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall52/StaticBody3D"]
+shape = SubResource("BoxShape3D_6q0bu")
+
+[node name="Wall35" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.75, 2.5, -43)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall35"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall35/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="Wall36" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.75, 2.5, -38)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall36"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall36/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="Wall39" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.75, 2.5, -34.75)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall39"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall39/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="Wall49" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.75, 2.5, -33)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall49"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall49/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="Wall50" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.75, 2.5, -31.898)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall50"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall50/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="Wall41" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.75, 2.5, -31.75)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall41"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall41/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="Wall40" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 2.5, -46)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall40"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall40/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="FalseWall" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.75, 4, -40.5)
+
+[node name="FalseWall6" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.5, 4, 3.5)
+
+[node name="FalseWall7" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.5, 4, -46.5)
+
+[node name="Wall37" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, 2.5, -35)
+mesh = SubResource("BoxMesh_dn3k7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall37"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall37/StaticBody3D"]
+shape = SubResource("BoxShape3D_wxsc3")
+
+[node name="FalseWall4" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, 4, -32.5)
+
+[node name="Wall42" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 49.25, 2.5, -36)
+mesh = SubResource("BoxMesh_ctvrh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall42"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall42/StaticBody3D"]
+shape = SubResource("BoxShape3D_4iktm")
+
+[node name="Wall43" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 46.25, 2.5, -36)
+mesh = SubResource("BoxMesh_ctvrh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall43"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall43/StaticBody3D"]
+shape = SubResource("BoxShape3D_4iktm")
+
+[node name="Wall48" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.5, 2.5, -34.6)
+mesh = SubResource("BoxMesh_ctvrh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall48"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall48/StaticBody3D"]
+shape = SubResource("BoxShape3D_4iktm")
+
+[node name="Wall45" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 2.5, -50)
+mesh = SubResource("BoxMesh_ctvrh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall45"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall45/StaticBody3D"]
+shape = SubResource("BoxShape3D_4iktm")
+
+[node name="Wall46" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 2.5, -50.7168)
+mesh = SubResource("BoxMesh_ctvrh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall46"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall46/StaticBody3D"]
+shape = SubResource("BoxShape3D_4iktm")
+
+[node name="Wall44" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, 2.5, -31)
+mesh = SubResource("BoxMesh_ctvrh")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/PuzzleRoom4/Wall44"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall44/StaticBody3D"]
+shape = SubResource("BoxShape3D_4iktm")
+
+[node name="FalseWall3" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 47.75, 4, -36)
+
+[node name="FalseWall5" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 40, 4, -34.6)
+
+[node name="FalseWall2" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
 
 [node name="Wall28" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.5, 2.5, -30.5)
@@ -822,9 +1593,6 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall32/StaticBody3D"]
 shape = SubResource("BoxShape3D_8p8rr")
-
-[node name="Door" parent="Terrain/PuzzleRoom4" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.8077, 0, -40.8003)
 
 [node name="StartingRoom" type="Node3D" parent="Terrain"]
 
@@ -948,7 +1716,37 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/Fences/Wall35"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/Fences/Wall35/StaticBody3D"]
-shape = SubResource("BoxShape3D_1pet1")
+shape = SubResource("BoxShape3D_p4j1k")
+
+[node name="Wall37" type="MeshInstance3D" parent="Terrain/Fences"]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 5, 1.25, -54)
+mesh = SubResource("BoxMesh_36cbs")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/Fences/Wall37"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/Fences/Wall37/StaticBody3D"]
+shape = SubResource("BoxShape3D_p4j1k")
+
+[node name="Wall39" type="MeshInstance3D" parent="Terrain/Fences"]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 0, 1.25, -53)
+mesh = SubResource("BoxMesh_36cbs")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/Fences/Wall39"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/Fences/Wall39/StaticBody3D"]
+shape = SubResource("BoxShape3D_p4j1k")
+
+[node name="Wall38" type="MeshInstance3D" parent="Terrain/Fences"]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -5.5, 1.25, -54.041)
+mesh = SubResource("BoxMesh_36cbs")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/Fences/Wall38"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/Fences/Wall38/StaticBody3D"]
+shape = SubResource("BoxShape3D_p4j1k")
 
 [node name="Wall36" type="MeshInstance3D" parent="Terrain/Fences"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.5543, 1.25, -40.5)
@@ -958,7 +1756,7 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain/Fences/Wall36"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/Fences/Wall36/StaticBody3D"]
-shape = SubResource("BoxShape3D_x8o4o")
+shape = SubResource("BoxShape3D_ebhmc")
 
 [node name="RedRoom" type="Node3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
@@ -1034,10 +1832,6 @@ shape = SubResource("BoxShape3D_1h107")
 [node name="RedOrb" parent="Terrain/RedRoom" instance=ExtResource("5_8exi0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10)
 
-[node name="Door" parent="Terrain/RedRoom" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0590745, 0, 16)
-target_name = "start_doors"
-
 [node name="GreenRoom" type="Node3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
@@ -1111,9 +1905,6 @@ shape = SubResource("BoxShape3D_4esck")
 
 [node name="GreenOrb" parent="Terrain/GreenRoom" instance=ExtResource("6_p4c5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -10)
-
-[node name="Door" parent="Terrain/GreenRoom" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69052, 0, -9.78372)
 
 [node name="BlueRoom" type="Node3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
@@ -1189,20 +1980,34 @@ shape = SubResource("CylinderShape3D_upniv")
 [node name="BlueOrb" parent="Terrain/BlueRoom" instance=ExtResource("7_e60ih")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -30)
 
-[node name="Door" parent="Terrain/BlueRoom" instance=ExtResource("10_ta3e0")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.143296, 0, -36)
+[node name="Portal" parent="Terrain" instance=ExtResource("10_yujxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
+
+[node name="AreaTrigger" parent="Terrain/Portal" instance=ExtResource("11_j4lfh")]
+collision_mask = 2
+target = "end_level"
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Terrain/Portal/AreaTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40186, 0)
+shape = SubResource("BoxShape3D_qanh8")
+
+[node name="EndLevel" parent="Terrain/Portal" instance=ExtResource("12_dw6yw")]
+target_name = "end_level"
 
 [node name="Puzzles" type="Node" parent="."]
 
 [node name="StartPuzzle" type="Node" parent="Puzzles"]
 
-[node name="AlertInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("10_jw32f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38103, 0, 43.4591)
-target_name = "start_doors"
-message = "A gate has opened..."
-
 [node name="Door" parent="Puzzles/StartPuzzle" instance=ExtResource("10_ta3e0")]
 transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, 0, 30)
+target_name = "start_doors"
+
+[node name="Door2" parent="Puzzles/StartPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0590745, 0, 20)
+target_name = "start_doors"
+
+[node name="Door3" parent="Puzzles/StartPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.349, 0, 19.7092)
 target_name = "start_doors"
 
 [node name="CubeDial" type="Area3D" parent="Puzzles/StartPuzzle" groups=["interactables"]]
@@ -1244,8 +2049,9 @@ script = ExtResource("8_llyi4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
-mesh = SubResource("PlaneMesh_sdy7c")
+mesh = SubResource("PlaneMesh_8qucq")
 script = ExtResource("8_llyi4")
+green_sprite = ExtResource("15_mvirb")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/StartPuzzle/CubeDial"]
 stream = ExtResource("13_p2qsj")
@@ -1289,8 +2095,9 @@ script = ExtResource("8_llyi4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
-mesh = SubResource("PlaneMesh_45ypc")
+mesh = SubResource("PlaneMesh_44i6r")
 script = ExtResource("8_llyi4")
+green_sprite = ExtResource("27_t1qt4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
@@ -1334,8 +2141,9 @@ red_sprite = ExtResource("19_4xnq0")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
-mesh = SubResource("PlaneMesh_gwcs1")
+mesh = SubResource("PlaneMesh_1qa71")
 script = ExtResource("8_llyi4")
+green_sprite = ExtResource("19_56x18")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
@@ -1378,8 +2186,9 @@ mesh = SubResource("PlaneMesh_gbeu0")
 
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
-mesh = SubResource("PlaneMesh_f2ei0")
+mesh = SubResource("PlaneMesh_bmobh")
 script = ExtResource("8_llyi4")
+green_sprite = ExtResource("20_qk76r")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
@@ -1408,6 +2217,7 @@ bus = &"SFX"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
 target_string = "OPEN"
 character_array = "OOOO"
+verbose = false
 target = "start_limited"
 target_name = "start_puzzle"
 
@@ -1415,6 +2225,7 @@ target_name = "start_puzzle"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
 target_string = "POOP"
 character_array = "OOOO"
+verbose = false
 target = "poop"
 target_name = "start_puzzle"
 
@@ -1426,8 +2237,1222 @@ wait_time = 0.5
 
 [node name="LimitedInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("19_xf24e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+verbose = false
 target = "start_doors"
 target_name = "start_limited"
+
+[node name="Clue" type="Label3D" parent="Puzzles/StartPuzzle"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.46214, 2, 43.7645)
+text = "Spin the dials to
+OPEN the way
+forward..."
+font_size = 64
+
+[node name="EggPuzzle" type="Node" parent="Puzzles"]
+
+[node name="Riddle" type="Label3D" parent="Puzzles/EggPuzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7826, 3, 9.76451)
+text = "A container without hinges, lock or a key,
+Yet a golden treasure lies inside me.
+What am I?"
+font_size = 64
+
+[node name="Hint" type="Label3D" parent="Puzzles/EggPuzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7826, 1.80351, 9.76451)
+modulate = Color(1, 0, 0, 0.392157)
+outline_modulate = Color(0, 0, 0, 0.392157)
+text = "A faint red light yearns to break free..."
+
+[node name="Door" parent="Puzzles/EggPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69052, 0, -3.78372)
+target_name = "egg_doors"
+
+[node name="Door2" parent="Puzzles/EggPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.3371, 0, -20.7693)
+target_name = "egg_doors"
+
+[node name="CubeDial" type="Area3D" parent="Puzzles/EggPuzzle" groups=["interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6925, 1, 9.75)
+script = ExtResource("5_7e7gq")
+value = "__E_"
+outside_faces = 4.0
+target = "egg_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/EggPuzzle/CubeDial"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_w84p5")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/EggPuzzle/CubeDial"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_cx1mo")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_fybrq")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_tcowd")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("3_njydr")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_mwism")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/EggPuzzle/CubeDial"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial2" type="Area3D" parent="Puzzles/EggPuzzle" groups=["interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6925, 1, 9.75)
+script = ExtResource("5_7e7gq")
+place = 1
+value = "_G__"
+outside_faces = 4.0
+target = "egg_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/EggPuzzle/CubeDial2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_k60mc")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/EggPuzzle/CubeDial2"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_dl1cr")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_dl1cr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_d0aok")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_vap3d")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("22_fqg5d")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_qp7ft")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_hj7tr")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/EggPuzzle/CubeDial2"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial3" type="Area3D" parent="Puzzles/EggPuzzle" groups=["interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6925, 1, 9.75)
+script = ExtResource("5_7e7gq")
+place = 2
+value = "G___"
+outside_faces = 4.0
+target = "egg_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/EggPuzzle/CubeDial3"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_k60mc")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/EggPuzzle/CubeDial3"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_dl1cr")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_dl1cr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_onwe6")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("22_fqg5d")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_2u4t7")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_qp7ft")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_hj7tr")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/EggPuzzle/CubeDial3"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="PuzzleInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("6_37omq")]
+target_string = "EGG"
+character_array = "__G"
+verbose = false
+target = "egg_finished"
+target_name = "egg_puzzle"
+
+[node name="LimitedInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+verbose = false
+target = "egg_doors"
+target_name = "egg_finished"
+
+[node name="AlertInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("10_jw32f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28279, 0, 43.5026)
+target_name = "egg_doors"
+message = "A gate has opened..."
+
+[node name="TimePuzzle" type="Node" parent="Puzzles"]
+
+[node name="Door" parent="Puzzles/TimePuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.8324, -0.0182776, 19.7504)
+target_name = "time_door"
+
+[node name="RiddleMain" type="Label3D" parent="Puzzles/TimePuzzle"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.7826, 3, -10.7607)
+text = "I’m always                 but never            ,
+Through          and             , my path is             .
+What am I, that races               ,                 ?"
+font_size = 64
+
+[node name="RiddleHidden" type="Label3D" parent="Puzzles/TimePuzzle" groups=["hidden_text"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.7826, 3, -10.7607)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "                     running                    weary
+                days         nights                      dreary 
+                                         unseen, unheard?"
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint" type="Label3D" parent="Puzzles/TimePuzzle"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.7826, 1.9381, -10.7607)
+modulate = Color(0, 1, 0.0980392, 0.392157)
+outline_modulate = Color(0, 0, 0, 0.392157)
+text = "A flourish of green catches your eye..."
+
+[node name="Hint2" type="Label3D" parent="Puzzles/TimePuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.5071, 3, -14.7607)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "tick tock, tick tock, tick tock..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint3" type="Label3D" parent="Puzzles/TimePuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.7463, 3, -14.7607)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "I cure all wounds..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="CubeDial" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -28.2569, 1, -10.7679)
+script = ExtResource("5_7e7gq")
+value = "S__T"
+outside_faces = 4.0
+target = "time_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/TimePuzzle/CubeDial"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_w84p5")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/TimePuzzle/CubeDial"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_hmd2b")
+script = ExtResource("8_llyi4")
+blue_sprite = ExtResource("29_qjmf6")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_fybrq")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_qp7ft")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_2ig5f")
+script = ExtResource("8_llyi4")
+green_sprite = ExtResource("3_i6h71")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial2" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.2569, 1, -10.7679)
+script = ExtResource("5_7e7gq")
+place = 1
+value = "AI__"
+outside_faces = 4.0
+target = "time_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/TimePuzzle/CubeDial2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_w84p5")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/TimePuzzle/CubeDial2"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_s7hco")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_cx1mo")
+script = ExtResource("8_llyi4")
+blue_sprite = ExtResource("31_15ke0")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_hcdkg")
+script = ExtResource("8_llyi4")
+green_sprite = ExtResource("25_4615y")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_qp7ft")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_mwism")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial2"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial3" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.2569, 1, -10.7679)
+script = ExtResource("5_7e7gq")
+place = 2
+value = "N__M"
+outside_faces = 4.0
+target = "time_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/TimePuzzle/CubeDial3"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_w84p5")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/TimePuzzle/CubeDial3"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_deprm")
+script = ExtResource("8_llyi4")
+blue_sprite = ExtResource("33_airtq")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_fybrq")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_qp7ft")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_y003x")
+script = ExtResource("8_llyi4")
+green_sprite = ExtResource("26_oes5v")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial3"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial4" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -31.2569, 1, -10.7679)
+script = ExtResource("5_7e7gq")
+place = 3
+value = "D_E_"
+outside_faces = 4.0
+target = "time_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/TimePuzzle/CubeDial4"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_w84p5")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/TimePuzzle/CubeDial4"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_beigr")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_c1yry")
+script = ExtResource("8_llyi4")
+blue_sprite = ExtResource("35_ka4ps")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_fybrq")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_eerja")
+script = ExtResource("8_llyi4")
+green_sprite = ExtResource("27_t1qt4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_mwism")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial4"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="PuzzleInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("6_37omq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7706, 1.2087, -11)
+target_string = "TIME"
+character_array = "____"
+verbose = false
+target = "time_limited"
+target_name = "time_puzzle"
+
+[node name="LimitedInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+verbose = false
+target = "time_door"
+target_name = "time_limited"
+
+[node name="AlertInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("10_jw32f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28279, 0, 43.5026)
+target_name = "time_door"
+message = "A gate has opened..."
+
+[node name="HorsemenPuzzle" type="Node" parent="Puzzles"]
+
+[node name="Door" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.8077, 0, -20.8003)
+target_name = "horsemen_doors"
+
+[node name="Door2" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.143296, 0, -29)
+target_name = "horsemen_doors"
+
+[node name="Riddle" type="Label3D" parent="Puzzles/HorsemenPuzzle"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.498, 2.9381, 21.2393)
+modulate = Color(0, 1, 0.0980392, 0.784314)
+outline_modulate = Color(0, 0, 0, 0.392157)
+text = "Green light shall tell the
+tale of the horsemen..."
+font_size = 64
+
+[node name="Riddle2" type="Label3D" parent="Puzzles/HorsemenPuzzle"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.498, 1.9381, 21.2393)
+modulate = Color(1, 0, 0, 0.784314)
+outline_modulate = Color(0, 0, 0, 0.392157)
+text = "Red light will
+guide your path..."
+font_size = 64
+
+[node name="Hint" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.0033, 2, 21.2393)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "The horrors of WAR leave
+many mouths HUNGRY..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint2" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 25.0043, 2, 24.2393)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "In the end, DEATH
+takes us all.
+"
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint3" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 49.7472, 2, 22.2393)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "SICKNESS ravages
+the WEAK and FRAIL...
+"
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint4" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 46.7472, 2, 17.2393)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "WAR takes us all
+by surprise...
+"
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="CubeDial" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 1, 13.2792)
+script = ExtResource("5_7e7gq")
+place = 3
+value = "1234"
+outside_faces = 4.0
+target = "horsemen_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/HorsemenPuzzle/CubeDial"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_83lkh")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/HorsemenPuzzle/CubeDial"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_psl1x")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_psl1x")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_dylqj")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("28_wmyem")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_joi25")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("29_75yvf")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_w268d")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("30_k8kbu")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_xjxi7")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("31_yca3a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="RiddleMain" type="Label3D" parent="Puzzles/HorsemenPuzzle/CubeDial"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.00428391)
+text = "DEATH"
+font_size = 64
+
+[node name="CubeDial2" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 1, 17.7849)
+script = ExtResource("5_7e7gq")
+place = 1
+value = "1234"
+outside_faces = 4.0
+target = "horsemen_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/HorsemenPuzzle/CubeDial2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_rvjh0")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/HorsemenPuzzle/CubeDial2"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_jettj")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_jettj")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_dylqj")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("28_wmyem")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_joi25")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("29_75yvf")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_w268d")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("30_k8kbu")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_xjxi7")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("31_yca3a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial2"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="RiddleMain" type="Label3D" parent="Puzzles/HorsemenPuzzle/CubeDial2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.00428391)
+text = "FAMINE"
+font_size = 64
+
+[node name="CubeDial3" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44, 1, 15.523)
+script = ExtResource("5_7e7gq")
+place = 2
+value = "1234"
+outside_faces = 4.0
+target = "horsemen_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/HorsemenPuzzle/CubeDial3"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_rvjh0")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/HorsemenPuzzle/CubeDial3"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_jettj")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_jettj")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_dylqj")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("28_wmyem")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_joi25")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("29_75yvf")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_w268d")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("30_k8kbu")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_xjxi7")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("31_yca3a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial3"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="RiddleMain" type="Label3D" parent="Puzzles/HorsemenPuzzle/CubeDial3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.00428391)
+text = "PESTILENCE"
+font_size = 64
+
+[node name="CubeDial4" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 1, 26.9449)
+script = ExtResource("5_7e7gq")
+value = "1234"
+outside_faces = 4.0
+target = "horsemen_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/HorsemenPuzzle/CubeDial4"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_rvjh0")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/HorsemenPuzzle/CubeDial4"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_jettj")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_jettj")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_dylqj")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("28_wmyem")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_joi25")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("29_75yvf")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_w268d")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("30_k8kbu")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_xjxi7")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("31_yca3a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial4"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="RiddleMain" type="Label3D" parent="Puzzles/HorsemenPuzzle/CubeDial4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.00428391)
+text = "WAR"
+font_size = 64
+
+[node name="PuzzleInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("6_37omq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7706, 1.2087, -11)
+target_string = "1234"
+character_array = "1111"
+verbose = false
+target = "horsemen_limited"
+target_name = "horsemen_puzzle"
+
+[node name="LimitedInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+verbose = false
+target = "horsemen_doors"
+target_name = "horsemen_limited"
+
+[node name="AlertInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("10_jw32f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7172, 0, 19.5026)
+target_name = "horsemen_doors"
+message = "A gate has opened..."
+
+[node name="FinalPuzzle" type="Node" parent="Puzzles"]
+
+[node name="Door" parent="Puzzles/FinalPuzzle" instance=ExtResource("10_ta3e0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0325077, 0, -40.4279)
+target_name = "final_door"
+
+[node name="AlertInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("10_jw32f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28279, 0, 43.5026)
+target_name = "final_door"
+message = "The final gate has opened..."
+
+[node name="CounterInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("36_tnkja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -20)
+target_count = 4
+verbose = true
+target = "final_door"
+target_name = "counter"
+
+[node name="Riddle" type="Label3D" parent="Puzzles/FinalPuzzle"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.498, 4.08561, -20.486)
+modulate = Color(0, 0.0980392, 1, 0.784314)
+outline_modulate = Color(0, 0, 0, 0.392157)
+text = "BLUE light reveals
+the truth in all lies..."
+font_size = 64
+
+[node name="Riddle2" type="Label3D" parent="Puzzles/FinalPuzzle"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.0083, 4.08561, -20.486)
+text = "All light will aid
+in your quest..."
+font_size = 64
+
+[node name="Hint" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0033, 2, -13.7607)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "Where we began,
+reverse the key..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint3" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0097, 2, -28.3297)
+modulate = Color(0, 1, 0.0980392, 1)
+text = "Let the horsemen sing
+the number of the orbs..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 2
+
+[node name="Hint2" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 44.4897, 2, -26.7607)
+modulate = Color(1, 0, 0, 1)
+text = "From the egg,
+a mighty beast has hatched..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 1
+
+[node name="Hint4" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 49.7419, 2, -13.1528)
+modulate = Color(0, 0.0980392, 1, 1)
+text = "Across from time,
+a new answer lies..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 3
+
+[node name="Hint5" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2581, 2, -30.7395)
+modulate = Color(0, 0.0980392, 1, 1)
+text = "Grains trickle down
+to count down the hours..."
+font_size = 64
+script = ExtResource("23_4yxha")
+color = 3
+
+[node name="HorsemenPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, -28)
+target_string = "3333"
+character_array = "1111"
+verbose = true
+target = "horsemen_limited_final"
+target_name = "horsemen_puzzle"
+
+[node name="StartPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+transform = Transform3D(0.860924, 0.123741, -0.493454, 0.168472, 0.845889, 0.506052, 0.480027, -0.518806, 0.7074, 25, 0, -13.4982)
+target_string = "NEPO"
+character_array = "OOOO"
+verbose = true
+target = "reverse_limited"
+target_name = "start_puzzle"
+
+[node name="DragonPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+transform = Transform3D(0.860924, 0.123741, -0.493454, 0.168472, 0.845889, 0.506052, 0.480027, -0.518806, 0.7074, 44, 0, -27.0378)
+target_string = "DRAGON"
+character_array = "______"
+verbose = true
+target = "dragon_limited_final"
+target_name = "dragon_puzzle"
+
+[node name="SandPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+transform = Transform3D(0.860924, 0.123741, -0.493454, 0.168472, 0.845889, 0.506052, 0.480027, -0.518806, 0.7074, 49.5873, 0, -13.0378)
+target_string = "SAND"
+character_array = "____"
+verbose = true
+target = "sand_limited_final"
+target_name = "time_puzzle"
+
+[node name="DragonCubes" type="Node" parent="Puzzles/FinalPuzzle"]
+
+[node name="CubeDial" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -27.3883, 1, 29.7765)
+script = ExtResource("5_7e7gq")
+value = "_D__"
+outside_faces = 4.0
+target = "dragon_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_mmian")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_5u8yb")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_bwj6y")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("33_b1npb")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_hkt70")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_s8le3")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial2" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -28.3883, 1, 29.7765)
+script = ExtResource("5_7e7gq")
+place = 1
+value = "___R"
+outside_faces = 4.0
+target = "dragon_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_mmian")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_5u8yb")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_30lto")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_hkt70")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_j3rs2")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("34_hm6dd")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial3" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.3883, 1, 29.7765)
+script = ExtResource("5_7e7gq")
+place = 2
+value = "__A_"
+outside_faces = 4.0
+target = "dragon_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_mmian")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_5u8yb")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_30lto")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_jhk0r")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("35_4j218")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_s8le3")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial4" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.3883, 1, 29.7765)
+script = ExtResource("5_7e7gq")
+place = 3
+value = "__G_"
+outside_faces = 4.0
+target = "dragon_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_mmian")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_5u8yb")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_30lto")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_um4gf")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("22_fqg5d")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_s8le3")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial5" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -31.3883, 1, 29.7765)
+script = ExtResource("5_7e7gq")
+place = 4
+value = "___O"
+outside_faces = 4.0
+target = "dragon_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_mmian")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_5u8yb")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_30lto")
+script = ExtResource("8_llyi4")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_hkt70")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_cr8sn")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("19_4xnq0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="CubeDial6" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -32.3883, 1, 29.7765)
+script = ExtResource("5_7e7gq")
+place = 5
+value = "_N__"
+outside_faces = 4.0
+target = "dragon_puzzle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("SphereShape3D_mmian")
+
+[node name="Graphics" type="Node3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6"]
+
+[node name="Side" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics"]
+transform = Transform3D(1.31134e-07, 1, 0, 4.37114e-08, -3.55271e-15, -1, -1, 1.31134e-07, -4.37114e-08, 0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="Side2" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.25, 0, 0)
+mesh = SubResource("PlaneMesh_3pm4r")
+
+[node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
+mesh = SubResource("PlaneMesh_5u8yb")
+script = ExtResource("8_llyi4")
+
+[node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
+mesh = SubResource("PlaneMesh_06y5l")
+script = ExtResource("8_llyi4")
+red_sprite = ExtResource("36_bctws")
+
+[node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
+transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
+mesh = SubResource("PlaneMesh_hkt70")
+script = ExtResource("8_llyi4")
+
+[node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
+mesh = SubResource("PlaneMesh_s8le3")
+script = ExtResource("8_llyi4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6"]
+stream = ExtResource("13_p2qsj")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="LimitedInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0904, 0, -28.1442)
+verbose = true
+target = "counter"
+target_name = "horsemen_limited_final"
+
+[node name="LimitedInteractable3" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0904, 0, -13.5896)
+verbose = true
+target = "counter"
+target_name = "reverse_limited"
+
+[node name="LimitedInteractable2" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0904, 0, -26.1442)
+verbose = true
+target = "counter"
+target_name = "dragon_limited_final"
+
+[node name="LimitedInteractable4" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5974, 0, -13.1442)
+verbose = true
+target = "counter"
+target_name = "sand_limited_final"
 
 [node name="HUD" parent="." instance=ExtResource("8_1gmgk")]
 
@@ -1435,9 +3460,6 @@ target_name = "start_limited"
 visible = false
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("9_gl38p")]
-
-[node name="Door" parent="." instance=ExtResource("10_ta3e0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0325077, 0, -40.4279)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_sv480")

@@ -10,6 +10,7 @@ func update_interact_text(new_text: String):
 func update_alert_text(new_text: String):
 	alert_text.text = new_text
 	timer.start()
+	$AlertText/AnimationPlayer.play("fade")
 
 func clear_alert_text():
 	alert_text.text = ""

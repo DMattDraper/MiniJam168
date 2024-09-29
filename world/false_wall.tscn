@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8ldqf61a8ntp"]
+
+[ext_resource type="Texture2D" uid="uid://bxbwcgpnovt51" path="res://world/environment/textures/Bricks_21-256x256.png" id="1_t7mj3"]
+[ext_resource type="Material" uid="uid://bqu20sbx8ptk3" path="res://world/environment/false_wall.tres" id="2_1mo2i"]
+[ext_resource type="Script" path="res://world/false_wall.gd" id="2_mrp27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpgyh"]
+albedo_texture = ExtResource("1_t7mj3")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_hqmo4"]
+material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_be0s0"]
+material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m5kb5"]
+size = Vector3(0.5, 2, 2)
+
+[node name="FalseWall" type="MeshInstance3D" groups=["false_walls"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.75, 4, -48.5)
+mesh = SubResource("BoxMesh_hqmo4")
+skeleton = NodePath("../..")
+script = ExtResource("2_mrp27")
+
+[node name="InvisibleWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0)
+mesh = SubResource("BoxMesh_be0s0")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_1mo2i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_m5kb5")

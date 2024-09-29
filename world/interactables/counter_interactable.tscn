@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5rk16hpsh5fx"]
+
+[ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_yse0k"]
+[ext_resource type="Script" path="res://world/interactables/counter_interactable.gd" id="2_d4juw"]
+
+[node name="CounterInteractable" instance=ExtResource("1_yse0k")]
+script = ExtResource("2_d4juw")
+target_count = 2
+verbose = false

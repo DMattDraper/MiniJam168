@@ -113,6 +113,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
+collision_layer = 2
 script = ExtResource("1_hhvl7")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]

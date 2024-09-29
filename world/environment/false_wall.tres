@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqu20sbx8ptk3"]
+
+[ext_resource type="Texture2D" uid="uid://bxbwcgpnovt51" path="res://world/environment/textures/Bricks_21-256x256.png" id="1_mcdmb"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0, 0.0980392, 1, 0.392157)
+albedo_texture = ExtResource("1_mcdmb")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0, 0, 1, 1)
+emission_energy_multiplier = 0.5
+emission_texture = ExtResource("1_mcdmb")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0

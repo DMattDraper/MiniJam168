@@ -8,7 +8,7 @@ var interact_text := ""
 func _ready() -> void:
 	interact_ray.add_exception(player)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if interact_ray.is_colliding():
 		var target = interact_ray.get_collider()
 		
