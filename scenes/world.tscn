@@ -1,4 +1,4 @@
-[gd_scene load_steps=293 format=3 uid="uid://ml2uipml5302"]
+[gd_scene load_steps=298 format=3 uid="uid://ml2uipml5302"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_6xsf4"]
 [ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="1_7ifcb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://btmkcqfc48ycw" path="res://world/environment/fence.tscn" id="5_5ug2x"]
 [ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="5_7e7gq"]
 [ext_resource type="PackedScene" uid="uid://cdmhvqnm7aqqr" path="res://world/interactables/orbs/red_orb.tscn" id="5_8exi0"]
+[ext_resource type="Texture2D" uid="uid://26u4wmkmqvle" path="res://dopefish.png" id="5_r7mgo"]
 [ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="6_8ldkl"]
 [ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="6_37omq"]
 [ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="6_p4c5o"]
@@ -241,6 +242,17 @@ size = Vector3(0.5, 5, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pd61c"]
 size = Vector3(0.5, 5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ka6xl"]
+material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 5, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3vq0"]
+size = Vector3(0.5, 5, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eh6if"]
+material = SubResource("StandardMaterial3D_wpgyh")
+size = Vector3(0.5, 5, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3vpkg"]
 material = SubResource("StandardMaterial3D_wpgyh")
@@ -1082,11 +1094,14 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_4q3vg")
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0fna"]
+size = Vector3(10, 4, 2)
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_6xsf4")
 
 [node name="Player" parent="." instance=ExtResource("2_waxnw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44)
 
 [node name="Terrain" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
@@ -1639,6 +1654,49 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StartingRoom/Wall3/StaticBody3D"]
 shape = SubResource("BoxShape3D_pd61c")
+
+[node name="Sprite3D" type="Sprite3D" parent="Terrain/StartingRoom/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.260632, -1, 1.13923e-08)
+pixel_size = 0.0025
+axis = 0
+texture = ExtResource("5_r7mgo")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Terrain/StartingRoom/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.260632, -1, 3)
+pixel_size = 0.0025
+axis = 0
+texture = ExtResource("5_r7mgo")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Terrain/StartingRoom/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.260632, -1, -3)
+pixel_size = 0.0025
+axis = 0
+texture = ExtResource("5_r7mgo")
+
+[node name="Wall4" type="MeshInstance3D" parent="Terrain/StartingRoom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 2.5, 47)
+mesh = SubResource("BoxMesh_ka6xl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/StartingRoom/Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StartingRoom/Wall4/StaticBody3D"]
+shape = SubResource("BoxShape3D_x3vq0")
+
+[node name="Wall7" type="MeshInstance3D" parent="Terrain/StartingRoom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 2.5, 47)
+mesh = SubResource("BoxMesh_ka6xl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain/StartingRoom/Wall7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StartingRoom/Wall7/StaticBody3D"]
+shape = SubResource("BoxShape3D_x3vq0")
+
+[node name="Wall8" type="MeshInstance3D" parent="Terrain/StartingRoom"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.5, 47)
+mesh = SubResource("BoxMesh_eh6if")
+skeleton = NodePath("../..")
 
 [node name="Wall" type="MeshInstance3D" parent="Terrain/StartingRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73, 2.5, 40.006)
@@ -2561,6 +2619,12 @@ modulate = Color(1, 0, 0, 0.392157)
 outline_modulate = Color(0, 0, 0, 0.392157)
 text = "A faint red light yearns to break free..."
 
+[node name="Hint2" type="Label3D" parent="Puzzles/EggPuzzle"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.7826, 1.80351, 29.7235)
+modulate = Color(1, 0, 0, 0.392157)
+outline_modulate = Color(0, 0, 0, 0.392157)
+text = "A glimmer of crimson flames..."
+
 [node name="Door" parent="Puzzles/EggPuzzle" instance=ExtResource("10_ta3e0")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69052, 0, -3.78372)
 target_name = "egg_doors"
@@ -3361,7 +3425,7 @@ color = 3
 
 [node name="Hint3" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0097, 2, -28.3297)
-modulate = Color(0, 1, 0.0980392, 1)
+modulate = Color(1, 0, 0, 1)
 text = "Let the horsemen sing
 the number of the orbs..."
 font_size = 64
@@ -3764,3 +3828,16 @@ stream = ExtResource("21_sv480")
 volume_db = -8.0
 autoplay = true
 bus = &"Music"
+
+[node name="AreaTrigger" parent="." instance=ExtResource("11_j4lfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48.5625)
+target = "dopefish"
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AreaTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_a0fna")
+
+[node name="AlertInteractable" parent="." instance=ExtResource("10_jw32f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48.8931)
+target_name = "dopefish"
+message = "Dopefish Lives!"
