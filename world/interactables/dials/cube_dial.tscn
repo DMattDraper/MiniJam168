@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://ifjxle76vc2l"]
+[gd_scene load_steps=19 format=3 uid="uid://ifjxle76vc2l"]
 
 [ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_ctj7v"]
 [ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="2_ecj64"]
 [ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="3_38oxw"]
 [ext_resource type="Script" path="res://world/interactables/multi_color_object.gd" id="4_re1l1"]
+[ext_resource type="AudioStream" uid="uid://cb2y3w3kvfsuh" path="res://sound/sfx/world/stone_door.ogg" id="5_5go4t"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dgmxl"]
 
@@ -103,3 +104,10 @@ script = ExtResource("4_re1l1")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_mwism")
 script = ExtResource("4_re1l1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]
+stream = ExtResource("5_5go4t")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
