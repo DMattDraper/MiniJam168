@@ -5,6 +5,6 @@ class_name PuzzleInteractable extends Interactable
 
 func activate(data: InteractionData):
 	character_array[data.index] = data.value
-	
+	print(character_array)
 	if character_array == target_string:
 		super(data)
