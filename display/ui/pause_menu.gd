@@ -17,3 +17,6 @@ func set_music_slider(value):
 
 func _on_button_pressed() -> void:
 	GameManager.unpause()
+
+func _on_quit_pressed() -> void:
+	GameManager.quit()

@@ -5,4 +5,4 @@ func activate(data: InteractionData):
 	animation_player.play("end_level")
 	if wait_time > 0.0:
 		await get_tree().create_timer(wait_time).timeout
-	GameManager.restart()
+	GameManager.end_game()

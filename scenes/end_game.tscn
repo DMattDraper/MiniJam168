@@ -1,59 +1,56 @@
-[gd_scene load_steps=290 format=3 uid="uid://ml2uipml5302"]
+[gd_scene load_steps=287 format=3 uid="uid://b526bk20paped"]
 
-[ext_resource type="Script" path="res://scenes/scene.gd" id="1_6xsf4"]
-[ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="1_7ifcb"]
-[ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="2_waxnw"]
-[ext_resource type="Texture2D" uid="uid://bxbwcgpnovt51" path="res://world/environment/textures/Bricks_21-256x256.png" id="3_3cejg"]
-[ext_resource type="Texture2D" uid="uid://beypam78ffvnm" path="res://world/environment/textures/dial_faces/green/t.png" id="3_i6h71"]
-[ext_resource type="Texture2D" uid="uid://7alrvqnyir8p" path="res://world/environment/textures/dial_faces/red/e.png" id="3_njydr"]
-[ext_resource type="Texture2D" uid="uid://s7j20d3xkw62" path="res://world/environment/textures/Bricks_17-256x256.png" id="4_uf2kf"]
-[ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="5_7e7gq"]
-[ext_resource type="PackedScene" uid="uid://cdmhvqnm7aqqr" path="res://world/interactables/orbs/red_orb.tscn" id="5_8exi0"]
-[ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="6_8ldkl"]
-[ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="6_37omq"]
-[ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="6_p4c5o"]
-[ext_resource type="PackedScene" uid="uid://c8ldqf61a8ntp" path="res://world/false_wall.tscn" id="6_v0qgq"]
-[ext_resource type="PackedScene" uid="uid://g8ungw4v6h7e" path="res://world/interactables/orbs/blue_orb.tscn" id="7_e60ih"]
-[ext_resource type="PackedScene" uid="uid://0dwqip03vn5s" path="res://display/ui/hud.tscn" id="8_1gmgk"]
-[ext_resource type="Script" path="res://world/interactables/multi_color_object.gd" id="8_llyi4"]
-[ext_resource type="PackedScene" uid="uid://ckhby5fy7ip2n" path="res://display/world_environment.tscn" id="9_gl38p"]
-[ext_resource type="PackedScene" uid="uid://cyl3asmv6k1bp" path="res://world/interactables/alert_interactable.tscn" id="10_jw32f"]
-[ext_resource type="PackedScene" uid="uid://cbg8t3jy7e3gl" path="res://world/interactables/doors/door.tscn" id="10_ta3e0"]
-[ext_resource type="PackedScene" uid="uid://w6nwurbrjqdf" path="res://world/portal.tscn" id="10_yujxw"]
-[ext_resource type="PackedScene" uid="uid://djetmysyhd33n" path="res://world/interactables/area_trigger.tscn" id="11_j4lfh"]
-[ext_resource type="PackedScene" uid="uid://b27qqtsg80y12" path="res://world/interactables/end_level.tscn" id="12_dw6yw"]
-[ext_resource type="AudioStream" uid="uid://cb2y3w3kvfsuh" path="res://sound/sfx/world/stone_door.ogg" id="13_p2qsj"]
-[ext_resource type="Texture2D" uid="uid://bmftfjl7rj1ke" path="res://world/environment/textures/dial_faces/green/n.png" id="15_mvirb"]
-[ext_resource type="Texture2D" uid="uid://chc484eowk83d" path="res://world/environment/textures/dial_faces/red/p.png" id="15_wskad"]
-[ext_resource type="Texture2D" uid="uid://mpk25sdbhtm7" path="res://world/environment/textures/dial_faces/red/o.png" id="19_4xnq0"]
-[ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="19_8t4vo"]
-[ext_resource type="Texture2D" uid="uid://c52mmd30v03pb" path="res://world/environment/textures/dial_faces/green/p.png" id="19_56x18"]
-[ext_resource type="PackedScene" uid="uid://dengfjyuk48sq" path="res://display/ui/pause_menu.tscn" id="19_jpcgh"]
-[ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="19_xf24e"]
-[ext_resource type="AudioStream" uid="uid://dxesxy6hm5iav" path="res://sound/sfx/fart.ogg" id="20_e6il5"]
-[ext_resource type="Texture2D" uid="uid://ba1igjsw8mdbk" path="res://world/environment/textures/dial_faces/green/o.png" id="20_qk76r"]
-[ext_resource type="AudioStream" uid="uid://bhyo3w5ain177" path="res://sound/music/soundtrack.ogg" id="21_sv480"]
-[ext_resource type="Texture2D" uid="uid://c13mglvoa5cfv" path="res://world/environment/textures/dial_faces/red/g.png" id="22_fqg5d"]
-[ext_resource type="Script" path="res://scenes/hidden_text.gd" id="23_4yxha"]
-[ext_resource type="Texture2D" uid="uid://yh1ekltl2emc" path="res://world/environment/textures/dial_faces/green/i.png" id="25_4615y"]
-[ext_resource type="Texture2D" uid="uid://cq5ejkqbvo0f8" path="res://world/environment/textures/dial_faces/green/m.png" id="26_oes5v"]
-[ext_resource type="Texture2D" uid="uid://dlq7nn3682hlw" path="res://world/environment/textures/dial_faces/green/e.png" id="27_t1qt4"]
-[ext_resource type="Texture2D" uid="uid://bq4tynkhjm3bv" path="res://world/environment/textures/dial_faces/red/1.png" id="28_wmyem"]
-[ext_resource type="Texture2D" uid="uid://cwwigff1b63op" path="res://world/environment/textures/dial_faces/red/2.png" id="29_75yvf"]
-[ext_resource type="Texture2D" uid="uid://jocog141oslo" path="res://world/environment/textures/dial_faces/blue/s.png" id="29_qjmf6"]
-[ext_resource type="Texture2D" uid="uid://bmex1k3j87jjy" path="res://world/environment/textures/dial_faces/red/3.png" id="30_k8kbu"]
-[ext_resource type="Texture2D" uid="uid://bokpebjqaflh3" path="res://world/environment/textures/dial_faces/blue/a.png" id="31_15ke0"]
-[ext_resource type="Texture2D" uid="uid://cs028hn6bdqv7" path="res://world/environment/textures/dial_faces/red/4.png" id="31_yca3a"]
-[ext_resource type="Texture2D" uid="uid://c5yah6uf11n8q" path="res://world/environment/textures/dial_faces/blue/n.png" id="33_airtq"]
-[ext_resource type="Texture2D" uid="uid://cckw6b4wtyila" path="res://world/environment/textures/dial_faces/red/d.png" id="33_b1npb"]
-[ext_resource type="Texture2D" uid="uid://hllraewbxxq2" path="res://world/environment/textures/dial_faces/red/r.png" id="34_hm6dd"]
-[ext_resource type="Texture2D" uid="uid://bgtmrx4l0pdx2" path="res://world/environment/textures/dial_faces/red/a.png" id="35_4j218"]
-[ext_resource type="Texture2D" uid="uid://bpb3ocro848ww" path="res://world/environment/textures/dial_faces/blue/d.png" id="35_ka4ps"]
-[ext_resource type="Texture2D" uid="uid://b8xncb0dixo06" path="res://world/environment/textures/dial_faces/red/n.png" id="36_bctws"]
-[ext_resource type="PackedScene" uid="uid://b5rk16hpsh5fx" path="res://world/interactables/counter_interactable.tscn" id="36_tnkja"]
+[ext_resource type="Texture2D" uid="uid://bcbaarbqv82cp" path="res://world/environment/textures/Grass_12-256x256.png" id="3_8v6er"]
+[ext_resource type="Texture2D" uid="uid://bxbwcgpnovt51" path="res://world/environment/textures/Bricks_21-256x256.png" id="4_1ceas"]
+[ext_resource type="PackedScene" uid="uid://c8ldqf61a8ntp" path="res://world/false_wall.tscn" id="5_ptyot"]
+[ext_resource type="Texture2D" uid="uid://s7j20d3xkw62" path="res://world/environment/textures/Bricks_17-256x256.png" id="6_jvbv2"]
+[ext_resource type="PackedScene" uid="uid://cdmhvqnm7aqqr" path="res://world/interactables/orbs/red_orb.tscn" id="7_l0bos"]
+[ext_resource type="PackedScene" uid="uid://c2hmc3swu2t77" path="res://world/interactables/orbs/green_orb.tscn" id="8_7frwo"]
+[ext_resource type="PackedScene" uid="uid://g8ungw4v6h7e" path="res://world/interactables/orbs/blue_orb.tscn" id="9_is56y"]
+[ext_resource type="PackedScene" uid="uid://w6nwurbrjqdf" path="res://world/portal.tscn" id="10_xtn0q"]
+[ext_resource type="PackedScene" uid="uid://djetmysyhd33n" path="res://world/interactables/area_trigger.tscn" id="11_mnveu"]
+[ext_resource type="PackedScene" uid="uid://b27qqtsg80y12" path="res://world/interactables/end_level.tscn" id="12_txm1d"]
+[ext_resource type="PackedScene" uid="uid://cbg8t3jy7e3gl" path="res://world/interactables/doors/door.tscn" id="13_ufpxr"]
+[ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="14_unhuh"]
+[ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="15_gx3ts"]
+[ext_resource type="Script" path="res://world/interactables/multi_color_object.gd" id="16_8wmu4"]
+[ext_resource type="Texture2D" uid="uid://chc484eowk83d" path="res://world/environment/textures/dial_faces/red/p.png" id="17_c0sw0"]
+[ext_resource type="Texture2D" uid="uid://bmftfjl7rj1ke" path="res://world/environment/textures/dial_faces/green/n.png" id="18_cmmqk"]
+[ext_resource type="AudioStream" uid="uid://cb2y3w3kvfsuh" path="res://sound/sfx/world/stone_door.ogg" id="19_5q83k"]
+[ext_resource type="Texture2D" uid="uid://mpk25sdbhtm7" path="res://world/environment/textures/dial_faces/red/o.png" id="20_jpyo1"]
+[ext_resource type="Texture2D" uid="uid://dlq7nn3682hlw" path="res://world/environment/textures/dial_faces/green/e.png" id="21_vawew"]
+[ext_resource type="Texture2D" uid="uid://c52mmd30v03pb" path="res://world/environment/textures/dial_faces/green/p.png" id="22_brxw7"]
+[ext_resource type="Texture2D" uid="uid://ba1igjsw8mdbk" path="res://world/environment/textures/dial_faces/green/o.png" id="23_cefd7"]
+[ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="24_tdqb4"]
+[ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="25_fgre0"]
+[ext_resource type="AudioStream" uid="uid://dxesxy6hm5iav" path="res://sound/sfx/fart.ogg" id="26_c8sqg"]
+[ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="27_n8qk1"]
+[ext_resource type="Texture2D" uid="uid://7alrvqnyir8p" path="res://world/environment/textures/dial_faces/red/e.png" id="28_lfl2k"]
+[ext_resource type="Texture2D" uid="uid://c13mglvoa5cfv" path="res://world/environment/textures/dial_faces/red/g.png" id="29_g6i6u"]
+[ext_resource type="PackedScene" uid="uid://cyl3asmv6k1bp" path="res://world/interactables/alert_interactable.tscn" id="30_54vgh"]
+[ext_resource type="Script" path="res://scenes/hidden_text.gd" id="31_xh1p6"]
+[ext_resource type="Texture2D" uid="uid://jocog141oslo" path="res://world/environment/textures/dial_faces/blue/s.png" id="32_ldwe0"]
+[ext_resource type="Texture2D" uid="uid://beypam78ffvnm" path="res://world/environment/textures/dial_faces/green/t.png" id="33_jg3hj"]
+[ext_resource type="Texture2D" uid="uid://bokpebjqaflh3" path="res://world/environment/textures/dial_faces/blue/a.png" id="34_21fcv"]
+[ext_resource type="Texture2D" uid="uid://yh1ekltl2emc" path="res://world/environment/textures/dial_faces/green/i.png" id="35_uvxfn"]
+[ext_resource type="Texture2D" uid="uid://c5yah6uf11n8q" path="res://world/environment/textures/dial_faces/blue/n.png" id="36_g0i5v"]
+[ext_resource type="Texture2D" uid="uid://cq5ejkqbvo0f8" path="res://world/environment/textures/dial_faces/green/m.png" id="37_4i7vi"]
+[ext_resource type="Texture2D" uid="uid://bpb3ocro848ww" path="res://world/environment/textures/dial_faces/blue/d.png" id="38_3umcd"]
+[ext_resource type="Texture2D" uid="uid://bq4tynkhjm3bv" path="res://world/environment/textures/dial_faces/red/1.png" id="39_p6qm6"]
+[ext_resource type="Texture2D" uid="uid://cwwigff1b63op" path="res://world/environment/textures/dial_faces/red/2.png" id="40_udefo"]
+[ext_resource type="Texture2D" uid="uid://bmex1k3j87jjy" path="res://world/environment/textures/dial_faces/red/3.png" id="41_8wypj"]
+[ext_resource type="Texture2D" uid="uid://cs028hn6bdqv7" path="res://world/environment/textures/dial_faces/red/4.png" id="42_36vxb"]
+[ext_resource type="PackedScene" uid="uid://b5rk16hpsh5fx" path="res://world/interactables/counter_interactable.tscn" id="43_137te"]
+[ext_resource type="Texture2D" uid="uid://cckw6b4wtyila" path="res://world/environment/textures/dial_faces/red/d.png" id="44_ckxy0"]
+[ext_resource type="Texture2D" uid="uid://hllraewbxxq2" path="res://world/environment/textures/dial_faces/red/r.png" id="45_0qsew"]
+[ext_resource type="Texture2D" uid="uid://bgtmrx4l0pdx2" path="res://world/environment/textures/dial_faces/red/a.png" id="46_58rvk"]
+[ext_resource type="Texture2D" uid="uid://b8xncb0dixo06" path="res://world/environment/textures/dial_faces/red/n.png" id="47_1uiuu"]
+[ext_resource type="PackedScene" uid="uid://cjx61mgr56wmk" path="res://display/ui/end_menu.tscn" id="48_lhsuj"]
+[ext_resource type="PackedScene" uid="uid://ckhby5fy7ip2n" path="res://display/world_environment.tscn" id="50_75cnr"]
+[ext_resource type="AudioStream" uid="uid://bhyo3w5ain177" path="res://sound/music/soundtrack.ogg" id="51_6lbeq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32q51"]
-albedo_texture = ExtResource("1_7ifcb")
+albedo_texture = ExtResource("3_8v6er")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.25, 0.25, 0.25)
 uv1_triplanar = true
@@ -68,7 +65,7 @@ size = Vector2(100, 150)
 size = Vector3(100, 0, 150)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpgyh"]
-albedo_texture = ExtResource("3_3cejg")
+albedo_texture = ExtResource("4_1ceas")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
@@ -298,7 +295,7 @@ size = Vector3(0.5, 2.5, 27)
 size = Vector3(0.5, 2.5, 27)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dppyp"]
-albedo_texture = ExtResource("4_uf2kf")
+albedo_texture = ExtResource("6_jvbv2")
 metallic_specular = 0.0
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -353,7 +350,7 @@ size = Vector3(2, 2.80371, 0.1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_dgmxl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjxf1"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 texture_filter = 0
 
@@ -588,7 +585,7 @@ size = Vector2(0.5, 0.5)
 [sub_resource type="SphereShape3D" id="SphereShape3D_w84p5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvmv0"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 texture_filter = 0
 
@@ -597,7 +594,7 @@ material = SubResource("StandardMaterial3D_fvmv0")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ti2io"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
@@ -608,7 +605,7 @@ material = SubResource("StandardMaterial3D_ti2io")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hm24"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
@@ -649,7 +646,7 @@ size = Vector2(0.5, 0.5)
 [sub_resource type="SphereShape3D" id="SphereShape3D_k60mc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28n3e"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 texture_filter = 0
 
@@ -658,7 +655,7 @@ material = SubResource("StandardMaterial3D_28n3e")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obsy3"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
@@ -725,7 +722,7 @@ material = SubResource("StandardMaterial3D_sqi8j")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hohb1"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
@@ -848,7 +845,7 @@ size = Vector2(0.5, 0.5)
 [sub_resource type="SphereShape3D" id="SphereShape3D_83lkh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjq72"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 texture_filter = 0
 
@@ -915,7 +912,7 @@ size = Vector2(0.5, 0.5)
 [sub_resource type="SphereShape3D" id="SphereShape3D_rvjh0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eatdm"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 texture_filter = 0
 
@@ -926,7 +923,7 @@ size = Vector2(0.5, 0.5)
 [sub_resource type="SphereShape3D" id="SphereShape3D_mmian"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btalt"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 texture_filter = 0
 
@@ -935,7 +932,7 @@ material = SubResource("StandardMaterial3D_btalt")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvqk3"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
@@ -988,7 +985,7 @@ material = SubResource("StandardMaterial3D_eui2c")
 size = Vector2(0.5, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqdye"]
-albedo_texture = ExtResource("6_8ldkl")
+albedo_texture = ExtResource("15_gx3ts")
 metallic_specular = 0.0
 emission_enabled = true
 emission_energy_multiplier = 2.0
@@ -1068,11 +1065,7 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_4q3vg")
 size = Vector2(0.5, 0.5)
 
-[node name="World" type="Node3D"]
-script = ExtResource("1_6xsf4")
-
-[node name="Player" parent="." instance=ExtResource("2_waxnw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+[node name="EndGame" type="Node3D"]
 
 [node name="Terrain" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
@@ -1464,13 +1457,13 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall40/StaticBody3D"]
 shape = SubResource("BoxShape3D_wxsc3")
 
-[node name="FalseWall" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.75, 4, -40.5)
 
-[node name="FalseWall6" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall6" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.5, 4, 3.5)
 
-[node name="FalseWall7" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall7" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.5, 4, -46.5)
 
 [node name="Wall37" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
@@ -1483,7 +1476,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall37/StaticBody3D"]
 shape = SubResource("BoxShape3D_wxsc3")
 
-[node name="FalseWall4" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall4" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, 4, -32.5)
 
 [node name="Wall42" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
@@ -1546,13 +1539,13 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/PuzzleRoom4/Wall44/StaticBody3D"]
 shape = SubResource("BoxShape3D_4iktm")
 
-[node name="FalseWall3" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall3" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 47.75, 4, -36)
 
-[node name="FalseWall5" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall5" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 40, 4, -34.6)
 
-[node name="FalseWall2" parent="Terrain/PuzzleRoom4" instance=ExtResource("6_v0qgq")]
+[node name="FalseWall2" parent="Terrain/PuzzleRoom4" instance=ExtResource("5_ptyot")]
 
 [node name="Wall28" type="MeshInstance3D" parent="Terrain/PuzzleRoom4"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.5, 2.5, -30.5)
@@ -1829,7 +1822,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/RedRoom/Wall23/StaticBody3D"]
 shape = SubResource("BoxShape3D_1h107")
 
-[node name="RedOrb" parent="Terrain/RedRoom" instance=ExtResource("5_8exi0")]
+[node name="RedOrb" parent="Terrain/RedRoom" instance=ExtResource("7_l0bos")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10)
 
 [node name="GreenRoom" type="Node3D" parent="Terrain"]
@@ -1903,7 +1896,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/GreenRoom/Wall28/StaticBody3D"]
 shape = SubResource("BoxShape3D_4esck")
 
-[node name="GreenOrb" parent="Terrain/GreenRoom" instance=ExtResource("6_p4c5o")]
+[node name="GreenOrb" parent="Terrain/GreenRoom" instance=ExtResource("8_7frwo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -10)
 
 [node name="BlueRoom" type="Node3D" parent="Terrain"]
@@ -1977,13 +1970,13 @@ shape = SubResource("CylinderShape3D_l7131")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Terrain/BlueRoom/SightStand3/StaticBody3D"]
 shape = SubResource("CylinderShape3D_upniv")
 
-[node name="BlueOrb" parent="Terrain/BlueRoom" instance=ExtResource("7_e60ih")]
+[node name="BlueOrb" parent="Terrain/BlueRoom" instance=ExtResource("9_is56y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -30)
 
-[node name="Portal" parent="Terrain" instance=ExtResource("10_yujxw")]
+[node name="Portal" parent="Terrain" instance=ExtResource("10_xtn0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
 
-[node name="AreaTrigger" parent="Terrain/Portal" instance=ExtResource("11_j4lfh")]
+[node name="AreaTrigger" parent="Terrain/Portal" instance=ExtResource("11_mnveu")]
 collision_mask = 2
 target = "end_level"
 
@@ -1991,28 +1984,28 @@ target = "end_level"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40186, 0)
 shape = SubResource("BoxShape3D_qanh8")
 
-[node name="EndLevel" parent="Terrain/Portal" instance=ExtResource("12_dw6yw")]
+[node name="EndLevel" parent="Terrain/Portal" instance=ExtResource("12_txm1d")]
 target_name = "end_level"
 
 [node name="Puzzles" type="Node" parent="."]
 
 [node name="StartPuzzle" type="Node" parent="Puzzles"]
 
-[node name="Door" parent="Puzzles/StartPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door" parent="Puzzles/StartPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, 0, 30)
 target_name = "start_doors"
 
-[node name="Door2" parent="Puzzles/StartPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door2" parent="Puzzles/StartPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0590745, 0, 20)
 target_name = "start_doors"
 
-[node name="Door3" parent="Puzzles/StartPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door3" parent="Puzzles/StartPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.349, 0, 19.7092)
 target_name = "start_doors"
 
 [node name="CubeDial" type="Area3D" parent="Puzzles/StartPuzzle" groups=["interactables"]]
 transform = Transform3D(-0.00387466, 0, 0.999992, 0, 1, 0, -0.999992, 0, -0.00387466, -4.4233, 1, 45)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 value = "OPEN"
 outside_faces = 4.0
 target = "start_puzzle"
@@ -2034,27 +2027,27 @@ mesh = SubResource("PlaneMesh_gbeu0")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_iacmc")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_yy23a")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("15_wskad")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("17_c0sw0")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_2l1yt")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_8qucq")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("15_mvirb")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("18_cmmqk")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/StartPuzzle/CubeDial"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2062,7 +2055,7 @@ bus = &"SFX"
 
 [node name="CubeDial2" type="Area3D" parent="Puzzles/StartPuzzle" groups=["interactables"]]
 transform = Transform3D(-0.00387466, 0, 0.999992, 0, 1, 0, -0.999992, 0, -0.00387466, -4.42717, 1, 44)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 1
 value = "OPEN"
 outside_faces = 4.0
@@ -2085,27 +2078,27 @@ mesh = SubResource("PlaneMesh_gbeu0")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_dd6fo")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("19_4xnq0")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("20_jpyo1")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_dxaxb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_44i6r")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("27_t1qt4")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("21_vawew")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_x8b1n")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/StartPuzzle/CubeDial2"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2113,7 +2106,7 @@ bus = &"SFX"
 
 [node name="CubeDial3" type="Area3D" parent="Puzzles/StartPuzzle" groups=["interactables"]]
 transform = Transform3D(-0.00387466, 0, 0.999992, 0, 1, 0, -0.999992, 0, -0.00387466, -4.43105, 1, 43)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 2
 value = "OPEN"
 outside_faces = 4.0
@@ -2136,27 +2129,27 @@ mesh = SubResource("PlaneMesh_gbeu0")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_umgbu")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("19_4xnq0")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("20_jpyo1")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_1qa71")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("19_56x18")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("22_brxw7")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_nll7f")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_hhjaj")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/StartPuzzle/CubeDial3"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2164,7 +2157,7 @@ bus = &"SFX"
 
 [node name="CubeDial4" type="Area3D" parent="Puzzles/StartPuzzle" groups=["interactables"]]
 transform = Transform3D(-0.00387466, 0, 0.999992, 0, 1, 0, -0.999992, 0, -0.00387466, -4.43492, 1, 42)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 3
 value = "OPEN"
 outside_faces = 4.0
@@ -2187,33 +2180,33 @@ mesh = SubResource("PlaneMesh_gbeu0")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_bmobh")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("20_qk76r")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("23_cefd7")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_oxjug")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("15_wskad")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("17_c0sw0")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_h34w1")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/StartPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_t78r8")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/StartPuzzle/CubeDial4"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
 bus = &"SFX"
 
-[node name="PuzzleInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("6_37omq")]
+[node name="PuzzleInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
 target_string = "OPEN"
 character_array = "OOOO"
@@ -2221,7 +2214,7 @@ verbose = false
 target = "start_limited"
 target_name = "start_puzzle"
 
-[node name="PuzzleInteractable2" parent="Puzzles/StartPuzzle" instance=ExtResource("6_37omq")]
+[node name="PuzzleInteractable2" parent="Puzzles/StartPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
 target_string = "POOP"
 character_array = "OOOO"
@@ -2229,13 +2222,13 @@ verbose = false
 target = "poop"
 target_name = "start_puzzle"
 
-[node name="AudioEmitter" parent="Puzzles/StartPuzzle" instance=ExtResource("19_8t4vo")]
+[node name="AudioEmitter" parent="Puzzles/StartPuzzle" instance=ExtResource("25_fgre0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 43.5)
-audio = ExtResource("20_e6il5")
+audio = ExtResource("26_c8sqg")
 target_name = "poop"
 wait_time = 0.5
 
-[node name="LimitedInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 verbose = false
 target = "start_doors"
@@ -2247,11 +2240,6 @@ text = "Spin the dials to
 OPEN the way
 forward..."
 font_size = 64
-
-[node name="AlertInteractable" parent="Puzzles/StartPuzzle" instance=ExtResource("10_jw32f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
-target_name = "start_doors"
-message = "A gate has opened..."
 
 [node name="EggPuzzle" type="Node" parent="Puzzles"]
 
@@ -2268,17 +2256,17 @@ modulate = Color(1, 0, 0, 0.392157)
 outline_modulate = Color(0, 0, 0, 0.392157)
 text = "A faint red light yearns to break free..."
 
-[node name="Door" parent="Puzzles/EggPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door" parent="Puzzles/EggPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69052, 0, -3.78372)
 target_name = "egg_doors"
 
-[node name="Door2" parent="Puzzles/EggPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door2" parent="Puzzles/EggPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.3371, 0, -20.7693)
 target_name = "egg_doors"
 
 [node name="CubeDial" type="Area3D" parent="Puzzles/EggPuzzle" groups=["interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6925, 1, 9.75)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 value = "__E_"
 outside_faces = 4.0
 target = "egg_puzzle"
@@ -2300,26 +2288,26 @@ mesh = SubResource("PlaneMesh_beigr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_cx1mo")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_fybrq")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_tcowd")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("3_njydr")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("28_lfl2k")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_mwism")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/EggPuzzle/CubeDial"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2327,7 +2315,7 @@ bus = &"SFX"
 
 [node name="CubeDial2" type="Area3D" parent="Puzzles/EggPuzzle" groups=["interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6925, 1, 9.75)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 1
 value = "_G__"
 outside_faces = 4.0
@@ -2350,26 +2338,26 @@ mesh = SubResource("PlaneMesh_dl1cr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_d0aok")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_vap3d")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("22_fqg5d")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("29_g6i6u")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_qp7ft")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_hj7tr")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/EggPuzzle/CubeDial2"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2377,7 +2365,7 @@ bus = &"SFX"
 
 [node name="CubeDial3" type="Area3D" parent="Puzzles/EggPuzzle" groups=["interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6925, 1, 9.75)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 2
 value = "G___"
 outside_faces = 4.0
@@ -2400,52 +2388,52 @@ mesh = SubResource("PlaneMesh_dl1cr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_onwe6")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("22_fqg5d")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("29_g6i6u")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_2u4t7")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_qp7ft")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/EggPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_hj7tr")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/EggPuzzle/CubeDial3"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
 bus = &"SFX"
 
-[node name="PuzzleInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("6_37omq")]
+[node name="PuzzleInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("24_tdqb4")]
 target_string = "EGG"
 character_array = "__G"
 verbose = false
 target = "egg_finished"
 target_name = "egg_puzzle"
 
-[node name="LimitedInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 verbose = false
 target = "egg_doors"
 target_name = "egg_finished"
 
-[node name="AlertInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("10_jw32f")]
+[node name="AlertInteractable" parent="Puzzles/EggPuzzle" instance=ExtResource("30_54vgh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28279, 0, 43.5026)
 target_name = "egg_doors"
 message = "A gate has opened..."
 
 [node name="TimePuzzle" type="Node" parent="Puzzles"]
 
-[node name="Door" parent="Puzzles/TimePuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door" parent="Puzzles/TimePuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.8324, -0.0182776, 19.7504)
 target_name = "time_door"
 
@@ -2463,7 +2451,7 @@ text = "                     running                    weary
                 days         nights                      dreary 
                                          unseen, unheard?"
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="Hint" type="Label3D" parent="Puzzles/TimePuzzle"]
@@ -2477,7 +2465,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.50
 modulate = Color(0, 1, 0.0980392, 1)
 text = "tick tock, tick tock, tick tock..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="Hint3" type="Label3D" parent="Puzzles/TimePuzzle" groups=["hidden_text"]]
@@ -2485,12 +2473,12 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.74
 modulate = Color(0, 1, 0.0980392, 1)
 text = "I cure all wounds..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="CubeDial" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -28.2569, 1, -10.7679)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 value = "S__T"
 outside_faces = 4.0
 target = "time_puzzle"
@@ -2512,27 +2500,27 @@ mesh = SubResource("PlaneMesh_beigr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_hmd2b")
-script = ExtResource("8_llyi4")
-blue_sprite = ExtResource("29_qjmf6")
+script = ExtResource("16_8wmu4")
+blue_sprite = ExtResource("32_ldwe0")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_fybrq")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_qp7ft")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_2ig5f")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("3_i6h71")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("33_jg3hj")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2540,7 +2528,7 @@ bus = &"SFX"
 
 [node name="CubeDial2" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.2569, 1, -10.7679)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 1
 value = "AI__"
 outside_faces = 4.0
@@ -2563,27 +2551,27 @@ mesh = SubResource("PlaneMesh_beigr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_cx1mo")
-script = ExtResource("8_llyi4")
-blue_sprite = ExtResource("31_15ke0")
+script = ExtResource("16_8wmu4")
+blue_sprite = ExtResource("34_21fcv")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_hcdkg")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("25_4615y")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("35_uvxfn")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_qp7ft")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_mwism")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial2"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2591,7 +2579,7 @@ bus = &"SFX"
 
 [node name="CubeDial3" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.2569, 1, -10.7679)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 2
 value = "N__M"
 outside_faces = 4.0
@@ -2614,27 +2602,27 @@ mesh = SubResource("PlaneMesh_beigr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_deprm")
-script = ExtResource("8_llyi4")
-blue_sprite = ExtResource("33_airtq")
+script = ExtResource("16_8wmu4")
+blue_sprite = ExtResource("36_g0i5v")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_fybrq")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_qp7ft")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_y003x")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("26_oes5v")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("37_4i7vi")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial3"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2642,7 +2630,7 @@ bus = &"SFX"
 
 [node name="CubeDial4" type="Area3D" parent="Puzzles/TimePuzzle" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -31.2569, 1, -10.7679)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 3
 value = "D_E_"
 outside_faces = 4.0
@@ -2665,33 +2653,33 @@ mesh = SubResource("PlaneMesh_beigr")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_c1yry")
-script = ExtResource("8_llyi4")
-blue_sprite = ExtResource("35_ka4ps")
+script = ExtResource("16_8wmu4")
+blue_sprite = ExtResource("38_3umcd")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_fybrq")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_eerja")
-script = ExtResource("8_llyi4")
-green_sprite = ExtResource("27_t1qt4")
+script = ExtResource("16_8wmu4")
+green_sprite = ExtResource("21_vawew")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/TimePuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_mwism")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/TimePuzzle/CubeDial4"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
 bus = &"SFX"
 
-[node name="PuzzleInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("6_37omq")]
+[node name="PuzzleInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7706, 1.2087, -11)
 target_string = "TIME"
 character_array = "____"
@@ -2699,24 +2687,24 @@ verbose = false
 target = "time_limited"
 target_name = "time_puzzle"
 
-[node name="LimitedInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 verbose = false
 target = "time_door"
 target_name = "time_limited"
 
-[node name="AlertInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("10_jw32f")]
+[node name="AlertInteractable" parent="Puzzles/TimePuzzle" instance=ExtResource("30_54vgh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28279, 0, 43.5026)
 target_name = "time_door"
 message = "A gate has opened..."
 
 [node name="HorsemenPuzzle" type="Node" parent="Puzzles"]
 
-[node name="Door" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.8077, 0, -20.8003)
 target_name = "horsemen_doors"
 
-[node name="Door2" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door2" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.143296, 0, -29)
 target_name = "horsemen_doors"
 
@@ -2742,7 +2730,7 @@ modulate = Color(0, 1, 0.0980392, 1)
 text = "The horrors of WAR leave
 many mouths HUNGRY..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="Hint2" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
@@ -2752,7 +2740,7 @@ text = "In the end, DEATH
 takes us all.
 "
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="Hint3" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
@@ -2762,7 +2750,7 @@ text = "SICKNESS ravages
 the WEAK and FRAIL...
 "
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="Hint4" type="Label3D" parent="Puzzles/HorsemenPuzzle" groups=["hidden_text"]]
@@ -2772,12 +2760,12 @@ text = "WAR takes us all
 by surprise...
 "
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 2
 
 [node name="CubeDial" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 1, 13.2792)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 3
 value = "1234"
 outside_faces = 4.0
@@ -2800,29 +2788,29 @@ mesh = SubResource("PlaneMesh_psl1x")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_dylqj")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("28_wmyem")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("39_p6qm6")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_joi25")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("29_75yvf")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("40_udefo")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_w268d")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("30_k8kbu")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("41_8wypj")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_xjxi7")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("31_yca3a")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("42_36vxb")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2835,7 +2823,7 @@ font_size = 64
 
 [node name="CubeDial2" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 1, 17.7849)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 1
 value = "1234"
 outside_faces = 4.0
@@ -2858,29 +2846,29 @@ mesh = SubResource("PlaneMesh_jettj")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_dylqj")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("28_wmyem")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("39_p6qm6")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_joi25")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("29_75yvf")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("40_udefo")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_w268d")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("30_k8kbu")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("41_8wypj")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_xjxi7")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("31_yca3a")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("42_36vxb")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial2"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2893,7 +2881,7 @@ font_size = 64
 
 [node name="CubeDial3" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44, 1, 15.523)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 2
 value = "1234"
 outside_faces = 4.0
@@ -2916,29 +2904,29 @@ mesh = SubResource("PlaneMesh_jettj")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_dylqj")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("28_wmyem")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("39_p6qm6")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_joi25")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("29_75yvf")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("40_udefo")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_w268d")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("30_k8kbu")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("41_8wypj")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_xjxi7")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("31_yca3a")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("42_36vxb")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial3"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -2951,7 +2939,7 @@ font_size = 64
 
 [node name="CubeDial4" type="Area3D" parent="Puzzles/HorsemenPuzzle" groups=["interactables"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 1, 26.9449)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 value = "1234"
 outside_faces = 4.0
 target = "horsemen_puzzle"
@@ -2973,29 +2961,29 @@ mesh = SubResource("PlaneMesh_jettj")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_dylqj")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("28_wmyem")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("39_p6qm6")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_joi25")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("29_75yvf")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("40_udefo")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_w268d")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("30_k8kbu")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("41_8wypj")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/HorsemenPuzzle/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_xjxi7")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("31_yca3a")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("42_36vxb")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/HorsemenPuzzle/CubeDial4"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -3006,7 +2994,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.00428391)
 text = "WAR"
 font_size = 64
 
-[node name="PuzzleInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("6_37omq")]
+[node name="PuzzleInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7706, 1.2087, -11)
 target_string = "1234"
 character_array = "1111"
@@ -3014,29 +3002,29 @@ verbose = false
 target = "horsemen_limited"
 target_name = "horsemen_puzzle"
 
-[node name="LimitedInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 verbose = false
 target = "horsemen_doors"
 target_name = "horsemen_limited"
 
-[node name="AlertInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("10_jw32f")]
+[node name="AlertInteractable" parent="Puzzles/HorsemenPuzzle" instance=ExtResource("30_54vgh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7172, 0, 19.5026)
 target_name = "horsemen_doors"
 message = "A gate has opened..."
 
 [node name="FinalPuzzle" type="Node" parent="Puzzles"]
 
-[node name="Door" parent="Puzzles/FinalPuzzle" instance=ExtResource("10_ta3e0")]
+[node name="Door" parent="Puzzles/FinalPuzzle" instance=ExtResource("13_ufpxr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0325077, 0, -40.4279)
 target_name = "final_door"
 
-[node name="AlertInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("10_jw32f")]
+[node name="AlertInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("30_54vgh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28279, 0, 43.5026)
 target_name = "final_door"
 message = "The final gate has opened..."
 
-[node name="CounterInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("36_tnkja")]
+[node name="CounterInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("43_137te")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -20)
 target_count = 4
 verbose = true
@@ -3063,7 +3051,7 @@ modulate = Color(0, 1, 0.0980392, 1)
 text = "Where we began,
 reverse the key..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 3
 
 [node name="Hint3" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
@@ -3072,7 +3060,7 @@ modulate = Color(0, 1, 0.0980392, 1)
 text = "Let the horsemen sing
 the number of the orbs..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 3
 
 [node name="Hint2" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
@@ -3081,7 +3069,7 @@ modulate = Color(1, 0, 0, 1)
 text = "From the egg,
 a mighty beast has hatched..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 3
 
 [node name="Hint4" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
@@ -3090,7 +3078,7 @@ modulate = Color(0, 0.0980392, 1, 1)
 text = "Across from time,
 a new answer lies..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 3
 
 [node name="Hint5" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
@@ -3099,10 +3087,10 @@ modulate = Color(0, 0.0980392, 1, 1)
 text = "Grains trickle down
 to count down the hours..."
 font_size = 64
-script = ExtResource("23_4yxha")
+script = ExtResource("31_xh1p6")
 color = 3
 
-[node name="HorsemenPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+[node name="HorsemenPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, -28)
 target_string = "3333"
 character_array = "1111"
@@ -3110,7 +3098,7 @@ verbose = true
 target = "horsemen_limited_final"
 target_name = "horsemen_puzzle"
 
-[node name="StartPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+[node name="StartPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(0.860924, 0.123741, -0.493454, 0.168472, 0.845889, 0.506052, 0.480027, -0.518806, 0.7074, 25, 0, -13.4982)
 target_string = "NEPO"
 character_array = "OOOO"
@@ -3118,7 +3106,7 @@ verbose = true
 target = "reverse_limited"
 target_name = "start_puzzle"
 
-[node name="DragonPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+[node name="DragonPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(0.860924, 0.123741, -0.493454, 0.168472, 0.845889, 0.506052, 0.480027, -0.518806, 0.7074, 44, 0, -27.0378)
 target_string = "DRAGON"
 character_array = "______"
@@ -3126,7 +3114,7 @@ verbose = true
 target = "dragon_limited_final"
 target_name = "dragon_puzzle"
 
-[node name="SandPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("6_37omq")]
+[node name="SandPuzzle" parent="Puzzles/FinalPuzzle" instance=ExtResource("24_tdqb4")]
 transform = Transform3D(0.860924, 0.123741, -0.493454, 0.168472, 0.845889, 0.506052, 0.480027, -0.518806, 0.7074, 49.5873, 0, -13.0378)
 target_string = "SAND"
 character_array = "____"
@@ -3138,7 +3126,7 @@ target_name = "time_puzzle"
 
 [node name="CubeDial" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -27.3883, 1, 29.7765)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 value = "_D__"
 outside_faces = 4.0
 target = "dragon_puzzle"
@@ -3160,26 +3148,26 @@ mesh = SubResource("PlaneMesh_3pm4r")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_5u8yb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_bwj6y")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("33_b1npb")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("44_ckxy0")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_hkt70")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_s8le3")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -3187,7 +3175,7 @@ bus = &"SFX"
 
 [node name="CubeDial2" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -28.3883, 1, 29.7765)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 1
 value = "___R"
 outside_faces = 4.0
@@ -3210,26 +3198,26 @@ mesh = SubResource("PlaneMesh_3pm4r")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_5u8yb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_30lto")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_hkt70")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_j3rs2")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("34_hm6dd")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("45_0qsew")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial2"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -3237,7 +3225,7 @@ bus = &"SFX"
 
 [node name="CubeDial3" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -29.3883, 1, 29.7765)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 2
 value = "__A_"
 outside_faces = 4.0
@@ -3260,26 +3248,26 @@ mesh = SubResource("PlaneMesh_3pm4r")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_5u8yb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_30lto")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_jhk0r")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("35_4j218")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("46_58rvk")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_s8le3")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial3"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -3287,7 +3275,7 @@ bus = &"SFX"
 
 [node name="CubeDial4" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.3883, 1, 29.7765)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 3
 value = "__G_"
 outside_faces = 4.0
@@ -3310,26 +3298,26 @@ mesh = SubResource("PlaneMesh_3pm4r")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_5u8yb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_30lto")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_um4gf")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("22_fqg5d")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("29_g6i6u")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_s8le3")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial4"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -3337,7 +3325,7 @@ bus = &"SFX"
 
 [node name="CubeDial5" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -31.3883, 1, 29.7765)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 4
 value = "___O"
 outside_faces = 4.0
@@ -3360,26 +3348,26 @@ mesh = SubResource("PlaneMesh_3pm4r")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_5u8yb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_30lto")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_hkt70")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_cr8sn")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("19_4xnq0")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("20_jpyo1")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial5"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
@@ -3387,7 +3375,7 @@ bus = &"SFX"
 
 [node name="CubeDial6" type="Area3D" parent="Puzzles/FinalPuzzle/DragonCubes" groups=["interactables"]]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -32.3883, 1, 29.7765)
-script = ExtResource("5_7e7gq")
+script = ExtResource("14_unhuh")
 place = 5
 value = "_N__"
 outside_faces = 4.0
@@ -3410,64 +3398,64 @@ mesh = SubResource("PlaneMesh_3pm4r")
 [node name="FaceA" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.25)
 mesh = SubResource("PlaneMesh_5u8yb")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceB" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.25, 0)
 mesh = SubResource("PlaneMesh_06y5l")
-script = ExtResource("8_llyi4")
-red_sprite = ExtResource("36_bctws")
+script = ExtResource("16_8wmu4")
+red_sprite = ExtResource("47_1uiuu")
 
 [node name="FaceC" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
 transform = Transform3D(1, -1.50996e-07, 8.74228e-08, -8.74228e-08, 4.37114e-08, 1, -1.50996e-07, -1, 4.37114e-08, 0, 0, -0.25)
 mesh = SubResource("PlaneMesh_hkt70")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="FaceD" type="MeshInstance3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6/Graphics" groups=["colored"]]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_s8le3")
-script = ExtResource("8_llyi4")
+script = ExtResource("16_8wmu4")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Puzzles/FinalPuzzle/DragonCubes/CubeDial6"]
-stream = ExtResource("13_p2qsj")
+stream = ExtResource("19_5q83k")
 attenuation_model = 1
 volume_db = -4.0
 pitch_scale = 2.0
 bus = &"SFX"
 
-[node name="LimitedInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable" parent="Puzzles/FinalPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0904, 0, -28.1442)
 verbose = true
 target = "counter"
 target_name = "horsemen_limited_final"
 
-[node name="LimitedInteractable3" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable3" parent="Puzzles/FinalPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0904, 0, -13.5896)
 verbose = true
 target = "counter"
 target_name = "reverse_limited"
 
-[node name="LimitedInteractable2" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable2" parent="Puzzles/FinalPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0904, 0, -26.1442)
 verbose = true
 target = "counter"
 target_name = "dragon_limited_final"
 
-[node name="LimitedInteractable4" parent="Puzzles/FinalPuzzle" instance=ExtResource("19_xf24e")]
+[node name="LimitedInteractable4" parent="Puzzles/FinalPuzzle" instance=ExtResource("27_n8qk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5974, 0, -13.1442)
 verbose = true
 target = "counter"
 target_name = "sand_limited_final"
 
-[node name="HUD" parent="." instance=ExtResource("8_1gmgk")]
-
-[node name="PauseMenu" parent="." groups=["pause_menu"] instance=ExtResource("19_jpcgh")]
-visible = false
-
-[node name="WorldEnvironment" parent="." instance=ExtResource("9_gl38p")]
+[node name="WorldEnvironment" parent="." instance=ExtResource("50_75cnr")]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("21_sv480")
+stream = ExtResource("51_6lbeq")
 volume_db = -8.0
 autoplay = true
 bus = &"Music"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.8819, 1.4082, -3.65116)
+
+[node name="EndMenu" parent="." instance=ExtResource("48_lhsuj")]

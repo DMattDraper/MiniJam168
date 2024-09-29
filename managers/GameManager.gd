@@ -5,10 +5,6 @@ var sight_color: Sight.COLORS = Sight.COLORS.NONE
 var default_time_scale := 1.0
 var paused := false
 
-func _ready() -> void:
-	Engine.time_scale = default_time_scale
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
 func update_sight_color(color: Sight.COLORS):
 	var orbs = get_tree().get_nodes_in_group("orb")
 	for orb: Orb in orbs:
@@ -32,6 +28,7 @@ func update_sight_color(color: Sight.COLORS):
 
 func reset():
 	Engine.time_scale = default_time_scale
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	update_sight_color(Sight.COLORS.NONE)
 
 func handle_pause():
@@ -57,7 +54,14 @@ func quit():
 
 func restart():
 	get_tree().call_group("instanced", "queue_free")
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/world.tscn")
+
+func end_game():
+	get_tree().call_group("instanced", "queue_free")
+	Engine.time_scale = default_time_scale
+	paused = false
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://scenes/end_game.tscn")
 
 func fullscreen():
 	var fs = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN

@@ -65,7 +65,7 @@ theme_override_font_sizes/font_size = 48
 text = "PAUSED"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_lojqx")
 text = "RESUME"
@@ -100,6 +100,14 @@ size_flags_vertical = 4
 theme = ExtResource("2_lojqx")
 value = 100.0
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_lojqx")
+text = "QUIT
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/sfx_slider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/music_slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
