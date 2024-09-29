@@ -1117,7 +1117,7 @@ skeleton = NodePath("../../..")
 shape = SubResource("BoxShape3D_ve5tq")
 
 [node name="Ground2" type="MeshInstance3D" parent="Terrain"]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, -25)
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, -25)
 mesh = SubResource("PlaneMesh_7ioqj")
 skeleton = NodePath("../../..")
 
@@ -3424,9 +3424,9 @@ script = ExtResource("23_4yxha")
 color = 3
 
 [node name="Hint3" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0097, 2, -28.3297)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0097, 2, -27.8963)
 modulate = Color(1, 0, 0, 1)
-text = "Let the horsemen sing
+text = "Make the Horsemen sing
 the number of the orbs..."
 font_size = 64
 script = ExtResource("23_4yxha")
@@ -3453,8 +3453,9 @@ color = 3
 [node name="Hint5" type="Label3D" parent="Puzzles/FinalPuzzle" groups=["hidden_text"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2581, 2, -30.7395)
 modulate = Color(0, 0.0980392, 1, 1)
-text = "Grains trickle down
-to count down the hours..."
+text = "Where once was TIME,
+Grains trickle down
+to count away the hours..."
 font_size = 64
 script = ExtResource("23_4yxha")
 color = 3
