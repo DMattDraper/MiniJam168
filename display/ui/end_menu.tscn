@@ -72,6 +72,7 @@ theme = ExtResource("3_l8ttr")
 text = "RESTART"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_l8ttr")
 text = "QUIT

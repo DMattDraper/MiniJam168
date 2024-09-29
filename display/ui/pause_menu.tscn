@@ -101,6 +101,7 @@ theme = ExtResource("2_lojqx")
 value = 100.0
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_lojqx")
 text = "QUIT
