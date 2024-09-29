@@ -8,3 +8,4 @@ func activate(data: InteractionData):
 	print(character_array)
 	if character_array == target_string:
 		super(data)
+		$Success.play()

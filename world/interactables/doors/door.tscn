@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbg8t3jy7e3gl"]
+[gd_scene load_steps=11 format=3 uid="uid://cbg8t3jy7e3gl"]
 
 [ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_1f33a"]
 [ext_resource type="Script" path="res://world/interactables/doors/door.gd" id="2_7f6yp"]
 [ext_resource type="Texture2D" uid="uid://bigsuleohj1hm" path="res://world/environment/textures/gate.png" id="3_ewefj"]
+[ext_resource type="Script" path="res://sound/sfx/play_random_sound.gd" id="4_s5fh7"]
+[ext_resource type="AudioStream" uid="uid://b3v6eid26v580" path="res://sound/sfx/world/squeaky_door.ogg" id="5_53iyj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vw7nk"]
 size = Vector3(2, 2, 0.1)
@@ -61,6 +63,34 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Graphics/LeftGate/Squeaks")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphics/RightGate/Squeaks")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_c78p6"]
 resource_name = "open"
@@ -89,6 +119,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Graphics/LeftGate/Squeaks")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphics/RightGate/Squeaks")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dbc6i"]
@@ -123,6 +181,24 @@ alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("3_ewefj")
 
+[node name="Squeaks" type="Node3D" parent="Graphics/LeftGate" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("4_s5fh7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Graphics/LeftGate/Squeaks" index="0"]
+stream = ExtResource("5_53iyj")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Graphics/LeftGate/Squeaks" index="1"]
+stream = ExtResource("5_53iyj")
+pitch_scale = 0.9
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Graphics/LeftGate/Squeaks" index="2"]
+stream = ExtResource("5_53iyj")
+pitch_scale = 1.1
+bus = &"SFX"
+
 [node name="RightGate" type="StaticBody3D" parent="Graphics" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
@@ -143,6 +219,24 @@ texture = ExtResource("3_ewefj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Graphics/RightGate" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
 shape = SubResource("BoxShape3D_vw7nk")
+
+[node name="Squeaks" type="Node3D" parent="Graphics/RightGate" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("4_s5fh7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Graphics/RightGate/Squeaks" index="0"]
+stream = ExtResource("5_53iyj")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Graphics/RightGate/Squeaks" index="1"]
+stream = ExtResource("5_53iyj")
+pitch_scale = 0.9
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Graphics/RightGate/Squeaks" index="2"]
+stream = ExtResource("5_53iyj")
+pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {

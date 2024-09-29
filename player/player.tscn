@@ -1,10 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjkrnxpftqln6"]
+[gd_scene load_steps=20 format=3 uid="uid://bjkrnxpftqln6"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hhvl7"]
 [ext_resource type="Shader" path="res://effects/shaders/vignette.gdshader" id="2_1qiie"]
 [ext_resource type="PackedScene" uid="uid://of8r6nv4lqt5" path="res://player/character_mover.tscn" id="2_mitfl"]
 [ext_resource type="Script" path="res://player/interactor.gd" id="2_xyanl"]
 [ext_resource type="Texture2D" uid="uid://qx012ctecnqr" path="res://effects/SuperPerlin_01-512x512.png" id="6_0q8m0"]
+[ext_resource type="Script" path="res://sound/sfx/play_random_sound.gd" id="6_b11li"]
+[ext_resource type="AudioStream" uid="uid://dqopbc6emuv3e" path="res://sound/sfx/steps/leaves01.ogg" id="6_c1jtj"]
+[ext_resource type="AudioStream" uid="uid://bx1istdb51dj5" path="res://sound/sfx/steps/leaves02.ogg" id="7_232rq"]
+[ext_resource type="AudioStream" uid="uid://ds634kaxp8ihv" path="res://sound/sfx/world/ambience loop.wav" id="9_vskrf"]
+[ext_resource type="AudioStream" uid="uid://b110hyujel6x5" path="res://sound/sfx/world/activate.wav" id="10_fgc1s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v4kk7"]
 
@@ -192,3 +197,58 @@ libraries = {
 "": SubResource("AnimationLibrary_aurd4")
 }
 autoplay = "cycle"
+
+[node name="StepSounds" type="Node3D" parent="."]
+script = ExtResource("6_b11li")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StepSounds"]
+stream = ExtResource("6_c1jtj")
+volume_db = -8.0
+pitch_scale = 0.7
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="StepSounds"]
+stream = ExtResource("6_c1jtj")
+volume_db = -8.0
+pitch_scale = 0.6
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="StepSounds"]
+stream = ExtResource("6_c1jtj")
+volume_db = -8.0
+pitch_scale = 0.8
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D4" type="AudioStreamPlayer3D" parent="StepSounds"]
+stream = ExtResource("7_232rq")
+volume_db = -8.0
+pitch_scale = 0.7
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D5" type="AudioStreamPlayer3D" parent="StepSounds"]
+stream = ExtResource("7_232rq")
+volume_db = -8.0
+pitch_scale = 0.6
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3D6" type="AudioStreamPlayer3D" parent="StepSounds"]
+stream = ExtResource("7_232rq")
+volume_db = -8.0
+pitch_scale = 0.8
+bus = &"SFX"
+
+[node name="StepTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="SightAmbience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_vskrf")
+volume_db = -8.0
+bus = &"SFX"
+
+[node name="SightActivate" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_fgc1s")
+volume_db = -4.0
+bus = &"SFX"
+
+[connection signal="timeout" from="StepTimer" to="." method="reset_step_sound"]

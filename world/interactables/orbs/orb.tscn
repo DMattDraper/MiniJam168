@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://r7ko174xfgfu"]
+[gd_scene load_steps=11 format=3 uid="uid://r7ko174xfgfu"]
 
 [ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_pprgb"]
 [ext_resource type="Script" path="res://world/interactables/orbs/orb.gd" id="2_mghcv"]
+[ext_resource type="AudioStream" uid="uid://ce0244w3e3jxo" path="res://sound/sfx/world/loop_5.wav" id="3_e2m4u"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c3naq"]
 
@@ -181,3 +182,14 @@ libraries = {
 "": SubResource("AnimationLibrary_dm2ax")
 }
 autoplay = "spin"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]
+stream = ExtResource("3_e2m4u")
+attenuation_model = 1
+volume_db = -18.0
+unit_size = 5.0
+max_db = 0.0
+pitch_scale = 0.75
+autoplay = true
+max_distance = 5.0
+bus = &"SFX"
