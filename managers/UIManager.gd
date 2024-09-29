@@ -13,3 +13,8 @@ func update_interact_text(text: String):
 	if !is_instance_valid(hud):
 		return
 	hud.update_interact_text(text)
+
+func update_alert_text(text: String):
+	if !is_instance_valid(hud):
+		return
+	hud.update_alert_text(text)

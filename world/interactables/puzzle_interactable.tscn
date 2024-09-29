@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bokoq4j3osrw0"]
+[gd_scene load_steps=3 format=3 uid="uid://bokoq4j3osrw0"]
 
 [ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_icndp"]
 [ext_resource type="Script" path="res://world/interactables/puzzle_interactable.gd" id="2_2i863"]
-[ext_resource type="AudioStream" uid="uid://c8dl0sq3p7xrl" path="res://sound/sfx/world/puzzle_solve.wav" id="3_41kpu"]
 
 [node name="PuzzleInteractable" instance=ExtResource("1_icndp")]
 script = ExtResource("2_2i863")
@@ -10,6 +9,5 @@ target_string = "ABC"
 character_array = ""
 
 [node name="Success" type="AudioStreamPlayer3D" parent="." index="2"]
-stream = ExtResource("3_41kpu")
 volume_db = -4.0
 bus = &"SFX"

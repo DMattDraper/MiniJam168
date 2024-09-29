@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyl3asmv6k1bp"]
+
+[ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_5d3jj"]
+[ext_resource type="Script" path="res://world/interactables/alert_interactable.gd" id="2_l1uf4"]
+
+[node name="AlertInteractable" instance=ExtResource("1_5d3jj")]
+script = ExtResource("2_l1uf4")

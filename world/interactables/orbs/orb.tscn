@@ -1,25 +1,37 @@
-[gd_scene load_steps=11 format=3 uid="uid://r7ko174xfgfu"]
+[gd_scene load_steps=13 format=3 uid="uid://r7ko174xfgfu"]
 
 [ext_resource type="PackedScene" uid="uid://dnesj8ehnu2x5" path="res://world/interactables/interactable.tscn" id="1_pprgb"]
 [ext_resource type="Script" path="res://world/interactables/orbs/orb.gd" id="2_mghcv"]
+[ext_resource type="Shader" path="res://effects/shaders/psx.gdshader" id="3_6a2lp"]
 [ext_resource type="AudioStream" uid="uid://ce0244w3e3jxo" path="res://sound/sfx/world/loop_5.wav" id="3_e2m4u"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c3naq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s25fo"]
-transparency = 1
-albedo_color = Color(1, 1, 1, 0.392157)
-texture_filter = 0
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_523tf"]
+render_priority = 0
+shader = ExtResource("3_6a2lp")
+shader_parameter/affine_mapping = false
+shader_parameter/color = Color(1, 1, 1, 0.392157)
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
 
 [sub_resource type="SphereMesh" id="SphereMesh_mf44h"]
-material = SubResource("StandardMaterial3D_s25fo")
+material = SubResource("ShaderMaterial_523tf")
 radius = 0.35
 height = 0.7
 radial_segments = 6
 rings = 6
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8aw23"]
+render_priority = 0
+shader = ExtResource("3_6a2lp")
+shader_parameter/affine_mapping = false
+shader_parameter/color = Color(1, 1, 1, 0.392157)
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
+
 [sub_resource type="SphereMesh" id="SphereMesh_ciyja"]
-material = SubResource("StandardMaterial3D_s25fo")
+material = SubResource("ShaderMaterial_8aw23")
 radius = 0.25
 height = 0.5
 radial_segments = 6

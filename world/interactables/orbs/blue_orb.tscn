@@ -1,16 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://g8ungw4v6h7e"]
+[gd_scene load_steps=4 format=3 uid="uid://g8ungw4v6h7e"]
 
 [ext_resource type="PackedScene" uid="uid://r7ko174xfgfu" path="res://world/interactables/orbs/orb.tscn" id="1_4duwf"]
-[ext_resource type="Material" uid="uid://boirp51sofaaw" path="res://world/interactables/orbs/blue.tres" id="2_vwn5p"]
+[ext_resource type="Shader" path="res://effects/shaders/psx.gdshader" id="2_tyn7i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t3i4l"]
+render_priority = 0
+shader = ExtResource("2_tyn7i")
+shader_parameter/affine_mapping = false
+shader_parameter/color = Color(0, 0.0980392, 1, 0.392157)
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
 
 [node name="BlueOrb" instance=ExtResource("1_4duwf")]
 color = 3
 
 [node name="MeshInstance3D" parent="Graphics" index="0"]
-surface_material_override/0 = ExtResource("2_vwn5p")
+surface_material_override/0 = SubResource("ShaderMaterial_t3i4l")
 
 [node name="MeshInstance3D2" parent="Graphics" index="1"]
-surface_material_override/0 = ExtResource("2_vwn5p")
+surface_material_override/0 = SubResource("ShaderMaterial_t3i4l")
 
 [node name="OmniLight3D" parent="Graphics" index="2"]
 light_color = Color(0, 0.0980392, 1, 1)
