@@ -10,6 +10,7 @@ var index = 0
 var spin_degrees := 0.0
 
 var active = false
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 func _ready() -> void:
 	spin_degrees = 360.0 / outside_faces
@@ -33,6 +34,7 @@ func rotate_graphics():
 	var tween = get_tree().create_tween()
 	
 	tween.tween_property(graphics, "rotation", graphics.rotation + Vector3(deg_to_rad(spin_degrees), 0, 0), 2.0 / outside_faces)
+	audio_stream_player_3d.play()
 	#tween.tween_callback(graphics.queue_free)
 	
 	await tween.finished

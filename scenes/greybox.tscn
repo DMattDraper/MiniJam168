@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://c4jsgxd614kf7"]
+[gd_scene load_steps=70 format=3 uid="uid://c4jsgxd614kf7"]
 
 [ext_resource type="Script" path="res://scenes/scene.gd" id="1_hmrk8"]
 [ext_resource type="PackedScene" uid="uid://bjkrnxpftqln6" path="res://player/player.tscn" id="1_sxvfc"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bokoq4j3osrw0" path="res://world/interactables/puzzle_interactable.tscn" id="9_fmbyu"]
 [ext_resource type="Script" path="res://world/interactables/dials/dial.gd" id="10_q8ggf"]
 [ext_resource type="Texture2D" uid="uid://ch17gkwg5dre0" path="res://world/environment/textures/dial_faces/dial_face.png" id="11_enwpc"]
+[ext_resource type="PackedScene" uid="uid://dengfjyuk48sq" path="res://display/ui/pause_menu.tscn" id="11_uhxsa"]
 [ext_resource type="PackedScene" uid="uid://c2iwhd1btw3nv" path="res://world/interactables/audio_emitter.tscn" id="12_s2y8q"]
 [ext_resource type="Texture2D" uid="uid://chc484eowk83d" path="res://world/environment/textures/dial_faces/red/p.png" id="13_548kl"]
 [ext_resource type="PackedScene" uid="uid://do6decwrpjtb0" path="res://world/interactables/limited_interactable.tscn" id="13_qa1kj"]
@@ -21,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://mpk25sdbhtm7" path="res://world/environment/textures/dial_faces/red/o.png" id="14_57bh0"]
 [ext_resource type="Texture2D" uid="uid://ba1igjsw8mdbk" path="res://world/environment/textures/dial_faces/green/o.png" id="17_eeujc"]
 [ext_resource type="Texture2D" uid="uid://c52mmd30v03pb" path="res://world/environment/textures/dial_faces/green/p.png" id="20_4bj7w"]
+[ext_resource type="AudioStream" uid="uid://cb2y3w3kvfsuh" path="res://sound/sfx/world/stone_door.ogg" id="20_hwkku"]
 [ext_resource type="Texture2D" uid="uid://dlq7nn3682hlw" path="res://world/environment/textures/dial_faces/green/e.png" id="21_cm3wu"]
 [ext_resource type="Texture2D" uid="uid://bmftfjl7rj1ke" path="res://world/environment/textures/dial_faces/green/n.png" id="22_u14s0"]
 [ext_resource type="AudioStream" uid="uid://bhyo3w5ain177" path="res://sound/music/soundtrack.ogg" id="24_7i8ia"]
@@ -362,36 +364,39 @@ collision_layer = 1
 collision_mask = 1
 
 [node name="GreenOrb" parent="." instance=ExtResource("4_axmbm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -8)
 collision_layer = 1
 collision_mask = 1
 
 [node name="BlueOrb" parent="." instance=ExtResource("5_amx7y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -4)
 collision_layer = 1
 collision_mask = 1
 target_name = "blue"
 
 [node name="HUD" parent="." instance=ExtResource("6_txs8x")]
 
+[node name="PauseMenu" parent="." groups=["pause_menu"] instance=ExtResource("11_uhxsa")]
+visible = false
+
 [node name="DoorPuzzle" type="Node" parent="."]
 
 [node name="PuzzleInteractable" parent="DoorPuzzle" instance=ExtResource("9_fmbyu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123596, 1, 6.75961)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98764, 2, 4.4918)
 target_string = "OPEN"
 character_array = "OOOO"
 target = "limited"
 target_name = "word_counter"
 
 [node name="PuzzleInteractable2" parent="DoorPuzzle" instance=ExtResource("9_fmbyu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0123596, 1, 6.75961)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98764, 2, 4.4918)
 target_string = "POOP"
 character_array = "OOOO"
 target = "poop"
 target_name = "word_counter"
 
 [node name="AudioEmitter" parent="DoorPuzzle" instance=ExtResource("12_s2y8q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 6.31353)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28865, 1, 4.48756)
 audio = ExtResource("13_rwrtb")
 target_name = "poop"
 wait_time = 0.5
@@ -444,6 +449,13 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.
 mesh = SubResource("PlaneMesh_mwism")
 script = ExtResource("13_vnfpr")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="DoorPuzzle/CubeDial"]
+stream = ExtResource("20_hwkku")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
 [node name="CubeDial2" type="Area3D" parent="DoorPuzzle" groups=["interactables"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, 5)
 script = ExtResource("10_q8ggf")
@@ -487,6 +499,13 @@ script = ExtResource("13_vnfpr")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.25, 0)
 mesh = SubResource("PlaneMesh_mwism")
 script = ExtResource("13_vnfpr")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="DoorPuzzle/CubeDial2"]
+stream = ExtResource("20_hwkku")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
 
 [node name="CubeDial3" type="Area3D" parent="DoorPuzzle" groups=["interactables"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, 4)
@@ -532,6 +551,13 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.
 mesh = SubResource("PlaneMesh_mwism")
 script = ExtResource("13_vnfpr")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="DoorPuzzle/CubeDial3"]
+stream = ExtResource("20_hwkku")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
 [node name="CubeDial4" type="Area3D" parent="DoorPuzzle" groups=["interactables"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 1, 3)
 script = ExtResource("10_q8ggf")
@@ -576,8 +602,15 @@ mesh = SubResource("PlaneMesh_5domr")
 script = ExtResource("13_vnfpr")
 green_sprite = ExtResource("22_u14s0")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="DoorPuzzle/CubeDial4"]
+stream = ExtResource("20_hwkku")
+attenuation_model = 1
+volume_db = -4.0
+pitch_scale = 2.0
+bus = &"SFX"
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_7i8ia")
-volume_db = -6.0
+volume_db = -8.0
 autoplay = true
 bus = &"Music"

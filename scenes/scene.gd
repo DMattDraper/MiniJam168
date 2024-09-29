@@ -4,3 +4,4 @@ func _ready() -> void:
 	GameManager.reset()
 	UIManager.get_hud()
 	InteractionManager.connect_interactables()
+	SettingsManager.update_sliders()
